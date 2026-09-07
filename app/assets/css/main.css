@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Onest", "Segoe UI", sans-serif;
+  --color-ink: #0a1128;
+  --color-brand: #4d6bff;
+  --color-brand-dark: #1b3bd6;
+  --color-accent: #4d6bff;
+  --color-mist: #f3f4f7;
+  --color-paper: #f5f7fb;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+button,
+a,
+input {
+  -webkit-tap-highlight-color: transparent;
+}
+
+:focus-visible {
+  outline: 3px solid rgba(77, 107, 255, .34);
+  outline-offset: 3px;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.cta-illustration {
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, .18) 10%, #000 34%, #000 100%);
+  mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, .18) 10%, #000 34%, #000 100%);
+}
+
+.prose {
+  color: rgba(10, 17, 40, .68);
+  font-size: 1.0625rem;
+  line-height: 1.8;
+}
+
+.prose h1,
+.prose h2 {
+  color: var(--color-ink);
+  font-weight: 700;
+  letter-spacing: -.04em;
+}
+
+.prose h1 { margin: 1.25rem 0 2rem; font-size: clamp(2.75rem, 7vw, 5.5rem); line-height: 1; }
+.prose h2 { margin: 3rem 0 1rem; font-size: 1.75rem; line-height: 1.2; }
+.prose p + p { margin-top: 1rem; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
+}
+
+::selection {
+  background: #dce3ff;
+  color: #0a1128;
+}

@@ -1,0 +1,26 @@
+{
+  "name": "zhujkan-dental",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "typecheck": "nuxt typecheck"
+  },
+  "dependencies": {
+    "@lucide/vue": "^1.42.0",
+    "@nuxt/image": "^2.1.0",
+    "@nuxtjs/seo": "^5.3.14",
+    "@takumi-rs/core": "^2.13.7",
+    "@tailwindcss/vite": "^4.3.3",
+    "nuxt": "^4.5.2",
+    "tailwindcss": "^4.3.3"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.2",
+    "vue-tsc": "^3.0.7"
+  }
+}
