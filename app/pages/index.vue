@@ -8,13 +8,7 @@ import { faqs, services, testimonials } from '~/data/content'
 // Keep the first CTA available for reuse, but show only the final CTA for now.
 const showSnapshotCta = false
 
-useSeoMeta({
-  title: 'Лечение зубов в Хэйхэ с сопровождением',
-  description: 'Лечение, имплантация и протезирование зубов в клинике Жуйкан в Хэйхэ. Предварительный расчёт по снимку и сопровождение из Благовещенска.',
-  ogTitle: 'ГидМед — лечение в Хэйхэ с сопровождением',
-  ogDescription: 'Узнайте план лечения, сроки и стоимость до поездки в Китай.',
-  ogType: 'website',
-})
+usePageSeo('Лечение и протезирование зубов в Хэйхэ — ГидМед', 'Лечение и протезирование зубов в клинике Жуйкан в Хэйхэ. Предварительный расчёт по снимку, помощь с поездкой и сопровождение на русском языке.', '/')
 
 useSchemaOrg([
   defineOrganization({ name: 'ГидМед — Турбюро Профсоюзы', description: 'Стоматологическое лечение в Хэйхэ с сопровождением из Благовещенска.' }),

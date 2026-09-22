@@ -3,7 +3,7 @@ import ClinicGallery from '~/components/ClinicGallery.vue'
 import CoordinatorCta from '~/components/CoordinatorCta.vue'
 import { ArrowDown, MapPin } from '@lucide/vue'
 import { clinicDocuments } from '~/data/clinic-documents'
-useSeoMeta({ title: 'Клиника и врачи — Жуйкан в Хэйхэ', description: 'Познакомьтесь с клиникой Жуйкан: фотографии, специалисты, лицензии и сертификаты.' })
+usePageSeo('Клиника Жуйкан в Хэйхэ: врачи и фотографии — ГидМед', 'Клиника Жуйкан в Хэйхэ: фотографии кабинетов, врачи и специалисты, документы клиники. Познакомьтесь с местом лечения зубов в Китае до поездки.', '/clinic')
 const photos = [
   { image: '/images/clinic/reception-lobby-wide.png', alt: 'Холл и стойка регистрации', caption: 'Знакомство начинается здесь' },
   { image: '/images/clinic/dental-room-wide.png', alt: 'Стоматологический кабинет', caption: 'Кабинеты для приёма' },
@@ -31,7 +31,7 @@ const photos = [
     <section class="px-5 pb-12 pt-10 md:px-8 lg:px-12 lg:pb-20 lg:pt-16">
       <div class="mx-auto max-w-[1440px]">
         <div class="grid items-end gap-7 lg:grid-cols-[1.25fr_1fr] lg:gap-20">
-          <div><p class="text-sm font-medium text-brand-dark">Клиника и врачи</p><h1 class="mt-5 text-[clamp(2.75rem,5.3vw,5.5rem)] font-medium leading-[1.02] tracking-[-.055em]">Знакомьтесь,<br><span class="text-brand-dark">клиника Жуйкан</span></h1></div>
+          <div><p class="text-sm font-medium text-brand-dark">Клиника и врачи</p><h1 class="mt-5 text-[clamp(2.75rem,5.3vw,5.5rem)] font-medium leading-[1.02] tracking-[-.055em]">Клиника Жуйкан<br><span class="text-brand-dark">в Хэйхэ</span></h1></div>
           <div class="max-w-xl lg:pb-2">
             <p class="text-base leading-7 text-ink/60 md:text-lg md:leading-8">Стоматологическое лечение в Хэйхэ — с вниманием к вашему здоровью и сопровождением на русском языке. Познакомьтесь с клиникой и командой ещё до поездки.</p>
             <nav aria-label="Разделы страницы" class="mt-7 flex flex-wrap gap-x-6 gap-y-3 text-sm font-medium">

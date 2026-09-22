@@ -45,14 +45,14 @@ export default defineNuxtConfig({
   },
   sitemap: {
     zeroRuntime: true,
-    urls: [
-      '/doctors/implantologist',
-      '/doctors/prosthodontist',
-      '/doctors/therapist',
-      '/blog/how-to-prepare',
-      '/blog/implant-or-bridge',
-      '/blog/dental-ct',
-    ],
+    excludeAppSources: true,
+    urls: ['/', '/services', '/clinic', '/faq', '/contacts'].map(path => ({ loc: new URL(path, siteUrl).href })),
+  },
+  robots: {
+    // Let crawlers see privacy's noindex and deleted pages' 404 responses.
+    // Development/staging protection is provided by the SEO module.
+    groups: [{ userAgent: '*', allow: '/' }],
+    sitemap: [new URL('/sitemap.xml', siteUrl).href],
   },
   linkChecker: {
     enabled: true,

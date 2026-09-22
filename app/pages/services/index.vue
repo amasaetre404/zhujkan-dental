@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { priceCategories } from '~/data/prices'
-useSeoMeta({ title: 'Услуги и цены на лечение в Хэйхэ', description: 'Стоимость стоматологических услуг: хирургия, терапия, имплантация, протезирование, диагностика и уход. План лечения уточняется с врачом.' })
+usePageSeo('Цены на лечение зубов в Хэйхэ — ГидМед', 'Прайс стоматологии Жуйкан в Хэйхэ: лечение зубов, имплантация, протезирование и коронки. Стоимость услуг и предварительный расчёт перед поездкой в Китай.', '/services')
 const route = useRoute()
 const router = useRouter()
 const selected = computed(() => priceCategories.find(item => item.id === route.query.category) ?? priceCategories[0])
@@ -26,7 +26,7 @@ async function navigateTabs(event: KeyboardEvent, index: number) {
       <div class="mx-auto max-w-[1440px]">
         <p class="text-sm font-medium text-brand-dark">Услуги и цены</p>
         <div class="mt-5 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
-          <h1 class="max-w-[800px] text-[clamp(2.5rem,5vw,4.5rem)] font-medium leading-[1.04] tracking-[-.045em]">Лечение с понятной<br><span class="text-brand-dark">стоимостью</span></h1>
+          <h1 class="max-w-[800px] text-[clamp(2.5rem,5vw,4.5rem)] font-medium leading-[1.04] tracking-[-.045em]">Цены на лечение зубов <span class="text-brand-dark">в Хэйхэ</span></h1>
         </div>
 
         <div role="tablist" aria-label="Категории стоматологических услуг" class="price-tabs mt-10 flex gap-2 overflow-x-auto border-b border-ink/10 pb-4 pt-1 md:mt-14">

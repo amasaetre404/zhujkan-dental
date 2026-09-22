@@ -1,14 +1,14 @@
 <script setup lang="ts">
 import { Clock3, Mail, MapPin, Phone } from '@lucide/vue'
 import { contacts, officeHours } from '~/data/contacts'
-useSeoMeta({ title: 'Контакты в Благовещенске', description: 'Турбюро Профсоюзы: Благовещенск, Ленина, 120, офис 8. Телефоны, мессенджеры, часы работы и карта проезда.' })
+usePageSeo('Контакты ГидМед в Благовещенске — ГидМед', 'ГидМед — Турбюро Профсоюзы: Благовещенск, Ленина, 120. Телефоны, мессенджеры, часы работы и карта. Помощь с организацией лечения зубов в Хэйхэ.', '/contacts')
 </script>
 
 <template>
   <main class="px-5 pb-16 pt-10 md:px-8 lg:px-12 lg:pb-24 lg:pt-16">
     <div class="mx-auto max-w-[1440px]">
       <div class="grid items-end gap-7 lg:grid-cols-[1.2fr_1fr] lg:gap-20">
-        <div><p class="text-sm font-medium text-brand-dark">Контакты</p><h1 class="mt-5 text-[clamp(2.75rem,5vw,5rem)] font-medium leading-[1.04] tracking-[-.055em]">Мы рядом.<br><span class="text-brand-dark">Ещё до поездки</span></h1></div>
+        <div><p class="text-sm font-medium text-brand-dark">Контакты</p><h1 class="mt-5 text-[clamp(2.75rem,5vw,5rem)] font-medium leading-[1.04] tracking-[-.055em]">Контакты<br><span class="text-brand-dark">в Благовещенске</span></h1></div>
         <p class="max-w-xl text-base leading-7 text-ink/60 md:text-lg md:leading-8">Позвоните, напишите или приходите в офис в Благовещенске. Поможем разобраться с подготовкой к лечению и поездкой в Хэйхэ.</p>
       </div>
 
