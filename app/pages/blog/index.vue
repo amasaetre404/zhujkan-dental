@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ArrowUpRight } from '@lucide/vue'
 import { articles } from '~/data/content'
-useSeoMeta({ title: 'О лечении зубов в Китае | Блог Жуйкан', description: 'Полезные материалы о лечении зубов в Хэйхэ, подготовке к поездке, имплантации, протезировании и диагностике.' })
+useSeoMeta({ title: 'О лечении зубов в Китае | Блог ГидМед', description: 'Полезные материалы о лечении зубов в Хэйхэ, подготовке к поездке, имплантации, протезировании и диагностике.' })
 </script>
 
 <template>

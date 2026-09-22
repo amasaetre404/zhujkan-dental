@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Onest", "Segoe UI", sans-serif;
+  --font-sans: "Inter", "Segoe UI", sans-serif;
   --color-ink: #0a1128;
   --color-brand: #4d6bff;
   --color-brand-dark: #1b3bd6;
@@ -12,6 +12,18 @@
 
 html {
   scroll-behavior: smooth;
+  scrollbar-gutter: stable;
+}
+
+/* Replace the browser gutter with layout space so the backdrop covers the viewport. */
+html:has(.contact-modal[open]) {
+  scrollbar-gutter: auto;
+  padding-right: var(--modal-scrollbar-gap, 0px);
+}
+
+html:has(.clinic-lightbox[open]) {
+  scrollbar-gutter: auto;
+  padding-right: var(--gallery-scrollbar-gap, 0px);
 }
 
 body {
@@ -27,6 +39,21 @@ button,
 a,
 input {
   -webkit-tap-highlight-color: transparent;
+}
+
+/* All enabled actions share the same pointer affordance. */
+a[href]:not([aria-disabled="true"]),
+button:enabled:not([aria-disabled="true"]),
+input:is([type="button"], [type="submit"], [type="reset"]):enabled:not([aria-disabled="true"]),
+[role="button"]:not([disabled]):not([aria-disabled="true"]),
+summary:not([aria-disabled="true"]) {
+  cursor: pointer;
+}
+
+button:disabled,
+input:disabled,
+[aria-disabled="true"] {
+  cursor: default;
 }
 
 :focus-visible {

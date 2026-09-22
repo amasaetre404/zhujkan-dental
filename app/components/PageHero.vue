@@ -8,7 +8,7 @@ withDefaults(defineProps<{ eyebrow: string; title: string; text: string; action?
       <p class="text-xs font-extrabold uppercase tracking-[0.2em] text-accent">{{ eyebrow }}</p>
       <h1 class="mt-5 max-w-5xl text-balance text-5xl font-semibold leading-[.98] tracking-[-0.055em] text-ink md:text-7xl lg:text-8xl">{{ title }}</h1>
       <p class="mt-7 max-w-2xl text-lg leading-8 text-ink/60">{{ text }}</p>
-      <AuraButton v-if="action" href="#request" class="mt-9">Получить расчёт</AuraButton>
+      <AuraButton v-if="action" contact class="mt-9">Связаться с координатором</AuraButton>
     </div>
   </section>
 </template>

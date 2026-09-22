@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { Menu, X } from '@lucide/vue'
+import { Menu, Phone, X } from '@lucide/vue'
+import { contacts } from '~/data/contacts'
 
 const route = useRoute()
 const isOpen = ref(false)
@@ -7,11 +8,9 @@ const isOpen = ref(false)
 watch(() => route.fullPath, () => { isOpen.value = false })
 
 const navigation = [
-  { label: 'Услуги', to: '/services' },
-  { label: 'Цены', to: '/prices' },
-  { label: 'Как всё проходит', to: '/how-it-works' },
-  { label: 'Клиника', to: '/clinic' },
-  { label: 'Врачи', to: '/doctors' },
+  { label: 'Услуги и цены', to: '/services' },
+  { label: 'Клиника и врачи', to: '/clinic' },
+  { label: 'Вопросы и ответы', to: '/faq' },
   { label: 'Контакты', to: '/contacts' },
 ]
 </script>
@@ -34,11 +33,10 @@ const navigation = [
       </nav>
 
       <div class="hidden items-center gap-4 sm:flex">
-        <span class="hidden text-right xl:block">
-          <span class="block text-[11px] uppercase tracking-[0.16em] text-ink/42">Представительство</span>
-          <span class="mt-0.5 block text-sm font-semibold">Благовещенск</span>
-        </span>
-        <AuraButton to="/#calculation">Получить расчёт</AuraButton>
+        <div class="hidden flex-col gap-1 xl:flex">
+          <a :href="contacts.phoneHref" class="inline-flex min-h-11 items-center gap-2 whitespace-nowrap text-sm font-semibold text-ink transition-colors hover:text-brand"><Phone aria-hidden="true" class="size-4 text-brand" />{{ contacts.phone }}</a>
+        </div>
+        <AuraButton contact>Связаться</AuraButton>
       </div>
 
       <button
@@ -59,7 +57,8 @@ const navigation = [
           <NuxtLink v-for="item in navigation" :key="item.to" :to="item.to" class="rounded-2xl px-4 py-3 text-lg font-semibold hover:bg-mist">
             {{ item.label }}
           </NuxtLink>
-          <AuraButton to="/#calculation" class="mt-3 w-full justify-between">Получить расчёт</AuraButton>
+          <a :href="contacts.phoneHref" class="inline-flex min-h-11 items-center gap-2 px-4 font-semibold text-brand-dark"><Phone aria-hidden="true" class="size-4" />{{ contacts.phone }}</a>
+          <AuraButton contact class="mt-3 w-full justify-between" @click="isOpen = false">Связаться с координатором</AuraButton>
         </div>
       </nav>
     </Transition>

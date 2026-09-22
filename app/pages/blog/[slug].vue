@@ -4,7 +4,7 @@ import { articles } from '~/data/content'
 const route = useRoute()
 const article = computed(() => articles.find(item => item.slug === route.params.slug))
 if (!article.value) throw createError({ statusCode: 404, statusMessage: 'Материал не найден' })
-useSeoMeta({ title: () => `${article.value!.title} | Жуйкан`, description: () => article.value!.excerpt })
+useSeoMeta({ title: () => `${article.value!.title} | ГидМед`, description: () => article.value!.excerpt })
 useSchemaOrg([defineArticle({ headline: article.value!.title, description: article.value!.excerpt })])
 </script>
 

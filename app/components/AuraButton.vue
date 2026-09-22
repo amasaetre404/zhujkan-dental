@@ -4,6 +4,7 @@ import { ArrowRight } from '@lucide/vue'
 const props = withDefaults(defineProps<{
   to?: string
   href?: string
+  contact?: boolean
   type?: 'button' | 'submit'
   variant?: 'primary' | 'secondary'
 }>(), {
@@ -13,10 +14,16 @@ const props = withDefaults(defineProps<{
 
 const element = computed(() => props.to ? resolveComponent('NuxtLink') : props.href ? 'a' : 'button')
 const isHovered = ref(false)
+const contactModal = useContactModal()
 
 const setHovered = (value: boolean) => {
   isHovered.value = value
 }
+
+// A modal can cover the pointer before pointerleave reaches the trigger.
+watch(contactModal, (open) => {
+  if (open) isHovered.value = false
+})
 </script>
 
 <template>
@@ -25,12 +32,13 @@ const setHovered = (value: boolean) => {
     :to="to"
     :href="href"
     :type="!to && !href ? type : undefined"
+    :aria-haspopup="contact ? 'dialog' : undefined"
+    @click="contact && (contactModal = true)"
     class="aura-button"
     :class="[`aura-button--${variant}`, { 'is-hovered': isHovered }]"
-    @pointerenter="setHovered(true)"
+    @pointerenter="setHovered($event.pointerType !== 'touch' && !contactModal)"
     @pointerleave="setHovered(false)"
-    @focusin="setHovered(true)"
-    @focusout="setHovered(false)"
+    @pointercancel="setHovered(false)"
   >
     <span class="aura-button__pill">
       <span class="aura-button__flood" aria-hidden="true" />
@@ -53,7 +61,7 @@ const setHovered = (value: boolean) => {
   padding: 0;
   border: 0;
   border-radius: 16px;
-  font-family: "Satoshi", "Onest", "Segoe UI", sans-serif;
+  font-family: var(--font-sans);
   font-size: 16px;
   font-weight: 500;
   letter-spacing: -.02em;

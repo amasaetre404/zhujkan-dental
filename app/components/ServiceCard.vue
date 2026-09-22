@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { ArrowUpRight } from '@lucide/vue'
 import type { Service } from '~/data/content'
 
 const props = defineProps<{ service: Service }>()
@@ -17,16 +16,15 @@ const image = computed(() => images[props.service.slug])
 </script>
 
 <template>
-  <NuxtLink
-    :to="`/services/${service.slug}`"
-    class="group flex min-h-full flex-col overflow-hidden rounded-[24px] border border-ink/9 bg-white transition-[border-color,box-shadow] duration-500 hover:border-brand/22 hover:shadow-[0_24px_64px_rgba(10,17,40,.08)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand"
+  <article
+    class="flex min-h-full flex-col overflow-hidden rounded-[24px] border border-ink/9 bg-white"
   >
     <div class="relative aspect-[16/10] overflow-hidden bg-mist">
       <NuxtImg
         v-if="image"
         :src="image.src"
         :alt="image.alt"
-        :class="['size-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.025]', image.position]"
+        :class="['size-full object-cover', image.position]"
         width="900"
         height="563"
         format="webp"
@@ -44,10 +42,7 @@ const image = computed(() => images[props.service.slug])
           <span class="block text-[11px] font-medium uppercase tracking-[.1em] text-ink/34">Стоимость</span>
           <span class="mt-1 block text-base font-medium text-brand-dark">{{ service.price }}</span>
         </div>
-        <span class="grid size-11 shrink-0 place-items-center rounded-[14px] border border-ink/10 text-ink transition-[background-color,color,border-color] duration-300 group-hover:border-brand group-hover:bg-brand group-hover:text-white">
-          <ArrowUpRight class="size-[18px]" />
-        </span>
       </div>
     </div>
-  </NuxtLink>
+  </article>
 </template>

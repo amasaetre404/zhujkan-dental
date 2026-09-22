@@ -1,10 +1,10 @@
 {
-  "name": "Стоматология Жуйкан",
-  "short_name": "Жуйкан",
+  "name": "ГидМед — лечение в Хэйхэ с сопровождением",
+  "short_name": "ГидМед",
   "lang": "ru",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#fbfcfa",
   "theme_color": "#4d6bff",
-  "icons": []
+  "icons": [{ "src": "/images/gidmed-avatar.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }]
 }

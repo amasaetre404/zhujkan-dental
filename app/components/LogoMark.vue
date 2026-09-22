@@ -1,13 +1,9 @@
 <template>
-  <NuxtLink to="/" class="group inline-flex items-center gap-3" aria-label="Жуйкан — на главную">
-    <span class="grid size-11 place-items-center rounded-xl bg-brand text-white shadow-[0_8px_24px_rgba(77,107,255,.2)] transition-transform group-hover:rotate-3">
-      <svg viewBox="0 0 32 32" class="size-6" fill="none" aria-hidden="true">
-        <path d="M16 7v18M7 16h18" stroke="currentColor" stroke-width="4" stroke-linecap="round" />
-      </svg>
-    </span>
+  <NuxtLink to="/" class="inline-flex shrink-0 items-center gap-2.5 sm:gap-3" aria-label="ГидМед — на главную">
+    <img src="/images/gidmed-mark.svg" alt="" width="40" height="54" class="h-[48px] w-[36px] shrink-0 sm:h-[54px] sm:w-10">
     <span>
-      <strong class="block text-xl font-extrabold leading-none tracking-[-0.04em] text-ink">ЖУЙКАН</strong>
-      <span class="mt-1 block text-[10px] font-semibold uppercase tracking-[0.19em] text-ink/45">Хэйхэ · Китай</span>
+      <strong class="block text-[26px] font-bold leading-none tracking-[-.045em] text-ink sm:text-[28px]">Гид<span class="text-brand">Мед</span></strong>
+      <span class="mt-1.5 block text-[9px] font-medium leading-4 tracking-[-.01em] text-[#59657b] sm:text-[10px]">Лечение в Хэйхэ с сопровождением</span>
     </span>
   </NuxtLink>
 </template>
