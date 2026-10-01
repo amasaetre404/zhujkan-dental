@@ -129,7 +129,7 @@ const navigation = [
 
       <div class="hidden items-center gap-4 sm:flex">
         <div class="hidden flex-col gap-1 xl:flex">
-          <a :href="contacts.phoneHref" class="inline-flex min-h-11 items-center gap-2 whitespace-nowrap text-sm font-semibold text-ink transition-colors hover:text-brand-dark"><Phone aria-hidden="true" class="size-4 text-brand-dark" />{{ contacts.phone }}</a>
+          <a :href="contacts.phoneHref" class="inline-flex min-h-11 items-center gap-2 whitespace-nowrap text-sm font-semibold text-ink transition-colors hover:text-brand-dark"><Phone aria-hidden="true" class="size-4 text-brand" />{{ contacts.phone }}</a>
         </div>
         <AuraButton contact>Связаться</AuraButton>
       </div>

@@ -150,8 +150,8 @@ watch(contactModal, (open) => {
 }
 
 .aura-button--primary {
-  --aura-frame-border: rgba(255, 255, 255, .25);
-  background: rgba(27, 185, 196, .4);
+  --aura-frame-border: transparent;
+  background: var(--color-brand-dark);
   color: #fff;
   box-shadow: none;
 }
@@ -165,7 +165,7 @@ watch(contactModal, (open) => {
 }
 
 .aura-button--primary .aura-button__arrow {
-  background: rgba(255, 255, 255, .25);
+  background: transparent;
   color: #fff;
 }
 
@@ -177,7 +177,7 @@ watch(contactModal, (open) => {
 }
 
 .aura-button--primary.is-hovered .aura-button__arrow {
-  background: #f3f4f7;
+  background: transparent;
   color: #0a1128;
 }
 
@@ -197,7 +197,7 @@ watch(contactModal, (open) => {
   right: 5px;
   bottom: 5px;
   left: calc(100% - 45px);
-  background: #f3f4f7;
+  background: transparent;
   transform: scale(1);
 }
 
@@ -207,8 +207,8 @@ watch(contactModal, (open) => {
 }
 
 .aura-button--secondary.is-hovered {
-  --aura-frame-border: rgba(255, 255, 255, .25);
-  background: rgba(27, 185, 196, .4);
+  --aura-frame-border: transparent;
+  background: var(--color-brand-dark);
   color: #fff;
 }
 

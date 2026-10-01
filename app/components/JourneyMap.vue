@@ -154,7 +154,7 @@ onBeforeUnmount(() => observer?.disconnect())
 .journey-map__steps { list-style: none; margin: 0; padding: 0; }
 .journey-map__step { position: absolute; left: calc(var(--x) - 8.333333%); top: var(--y); width: 18.5%; }
 .journey-map__number { position: absolute; top: -18px; left: -18px; display: grid; place-items: center; width: 36px; height: 36px; border: 1.5px solid var(--color-brand); border-radius: 50%; background: #f8faff; color: var(--color-brand-dark); font-size: 11px; font-weight: 600; box-shadow: 0 0 0 7px #f5f7f880; }
-.journey-map__number--end { background: var(--color-brand); color: white; box-shadow: 0 0 0 7px #1bb9c415, 0 0 0 15px #1bb9c408; }
+.journey-map__number--end { background: var(--color-brand); color: var(--color-ink); box-shadow: 0 0 0 7px #1bb9c415, 0 0 0 15px #1bb9c408; }
 .journey-map__copy { position: relative; margin: 37px 0 0 -18px; border-radius: 12px; background: #f5f7f8e8; box-shadow: 0 0 22px 16px #f5f7f8e8; }
 .journey-map__copy h3 { max-width: 235px; font-size: clamp(17px, 1.45vw, 21px); font-weight: 600; line-height: 1.3; letter-spacing: -.035em; text-wrap: balance; }
 .journey-map__copy p { margin-top: 11px; color: #586577; font-size: 14px; line-height: 1.75; }
@@ -163,7 +163,7 @@ onBeforeUnmount(() => observer?.disconnect())
 .journey-map__crossing { display: none; }
 .journey__footer { display: flex; align-items: center; justify-content: space-between; gap: 28px; padding: 28px 0 0; }
 .journey__support { display: flex; align-items: center; gap: 16px; }
-.journey__support-icon { display: grid; place-items: center; flex-shrink: 0; width: 48px; height: 48px; background: #e3f4f4; border-radius: 50%; color: var(--color-brand-dark); }
+.journey__support-icon { display: grid; place-items: center; flex-shrink: 0; width: 48px; height: 48px; background: #e3f4f4; border-radius: 50%; color: var(--color-brand); }
 .journey__support p { font-size: 14px; font-weight: 500; line-height: 1.7; }
 .journey__support p span { display: block; color: #626c7d; font-size: 13px; font-weight: 400; }
 @media (min-width: 901px) {

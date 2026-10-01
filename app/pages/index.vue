@@ -50,7 +50,7 @@ useSchemaOrg([
             <h2 class="mt-4 max-w-[720px] text-balance text-3xl font-medium leading-[1.02] tracking-[-.045em] text-ink md:text-5xl">Получите предварительный план до поездки</h2>
             <p class="mt-5 max-w-[620px] text-base leading-7 text-ink/65">Свяжитесь с координатором и передайте панорамный снимок или КТ. Врач оценит ситуацию, возможные сроки и бюджет.</p>
             <div class="mt-7 max-w-[760px]"><ContactChannels compact inline /></div>
-            <p class="mt-5 flex items-start gap-2 text-xs leading-5 text-ink/65"><BadgeCheck aria-hidden="true" class="mt-0.5 size-4 shrink-0 text-brand-dark" />Финальный план лечения подтверждается после очной диагностики.</p>
+            <p class="mt-5 flex items-start gap-2 text-xs leading-5 text-ink/65"><BadgeCheck aria-hidden="true" class="mt-0.5 size-4 shrink-0 text-brand" />Финальный план лечения подтверждается после очной диагностики.</p>
           </div>
         </div>
       </div>
@@ -91,7 +91,7 @@ useSchemaOrg([
 
     <section id="trust" class="scroll-mt-24 px-5 pb-20 md:px-8 lg:px-12 lg:pb-30">
       <div class="mx-auto grid max-w-[1440px] overflow-hidden rounded-[2.5rem] bg-[#e3f4f4] lg:grid-cols-2">
-        <div class="p-7 md:p-12 lg:p-16"><SectionHeading eyebrow="Безопасность" title="Доверие строится на документах, а не обещаниях" text="До поездки пациент понимает, кто отвечает за сопровождение, какие документы выдаются и как действуют гарантийные условия." /><div class="mt-10 grid gap-5"><div v-for="item in ['Лицензия клиники и перевод документов', 'Согласованный план лечения', 'Документы после проведённых процедур', 'Связь с представителем после возвращения']" :key="item" class="flex items-center gap-3 font-semibold"><CircleCheck aria-hidden="true" class="size-5 shrink-0 text-brand-dark" />{{ item }}</div></div><NuxtLink to="/clinic" class="mt-9 inline-flex items-center gap-2 font-bold text-brand-dark">О клинике и гарантиях <ArrowRight aria-hidden="true" class="size-4" /></NuxtLink></div>
+        <div class="p-7 md:p-12 lg:p-16"><SectionHeading eyebrow="Безопасность" title="Доверие строится на документах, а не обещаниях" text="До поездки пациент понимает, кто отвечает за сопровождение, какие документы выдаются и как действуют гарантийные условия." /><div class="mt-10 grid gap-5"><div v-for="item in ['Лицензия клиники и перевод документов', 'Согласованный план лечения', 'Документы после проведённых процедур', 'Связь с представителем после возвращения']" :key="item" class="flex items-center gap-3 font-semibold"><CircleCheck aria-hidden="true" class="size-5 shrink-0 text-brand" />{{ item }}</div></div><NuxtLink to="/clinic" class="mt-9 inline-flex items-center gap-2 font-bold text-brand-dark">О клинике и гарантиях <ArrowRight aria-hidden="true" class="size-4" /></NuxtLink></div>
         <figure class="relative m-0 min-h-[440px] overflow-hidden bg-[#dce5ed] sm:min-h-[540px] lg:min-h-0">
           <NuxtImg
             src="/images/trust-consultation-v1.png"

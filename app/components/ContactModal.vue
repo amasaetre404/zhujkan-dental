@@ -59,7 +59,7 @@ onBeforeUnmount(unlockScroll)
           <h2 id="contact-modal-title" class="mt-4 max-w-[520px] text-[32px] font-medium leading-[1.08] tracking-[-.04em] sm:text-[44px]">Обсудите лечение<br>с координатором</h2>
           <p id="contact-modal-description" class="mt-5 max-w-[470px] text-base leading-7 text-[#59657b]">Позвоните или напишите нам. Подскажем, какой снимок нужен, как его передать и с чего начать подготовку к поездке.</p>
           <div class="mt-7"><ContactChannels compact inline /></div>
-          <p class="mt-5 flex items-center gap-2 text-xs leading-5 text-[#59657b]"><FileCheck2 aria-hidden="true" class="size-4 shrink-0 text-brand-dark" />Без предоплаты и обязательств</p>
+          <p class="mt-5 flex items-center gap-2 text-xs leading-5 text-[#59657b]"><FileCheck2 aria-hidden="true" class="size-4 shrink-0 text-brand" />Без предоплаты и обязательств</p>
         </div>
       </div>
     </dialog>

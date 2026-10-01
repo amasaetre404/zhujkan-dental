@@ -32,7 +32,7 @@ async function navigateTabs(event: KeyboardEvent, index: number) {
         <div role="tablist" aria-label="Категории стоматологических услуг" class="price-tabs mt-10 flex gap-2 overflow-x-auto border-b border-ink/10 pb-4 pt-1 md:mt-14">
           <button v-for="(category, index) in priceCategories" :id="'tab-' + category.id" :key="category.id" type="button" role="tab" :aria-selected="selected.id === category.id" :aria-controls="'panel-' + category.id" :tabindex="selected.id === category.id ? 0 : -1"
             class="shrink-0 rounded-xl px-5 py-3.5 text-sm font-medium transition-colors"
-            :class="selected.id === category.id ? 'bg-brand-dark text-white' : 'text-[#59657b] hover:bg-[#e3f4f4] hover:text-brand-dark'"
+            :class="selected.id === category.id ? 'bg-[#e2f5f5] text-brand-dark ring-1 ring-inset ring-brand/25' : 'text-[#59657b] hover:bg-[#e3f4f4] hover:text-brand-dark'"
             @click="select(category.id)" @keydown="navigateTabs($event, index)">{{ category.title }}</button>
         </div>
 

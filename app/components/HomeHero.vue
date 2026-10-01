@@ -42,9 +42,9 @@ import HeroOffer from '~/components/HeroOffer.vue'
 .home-hero__prices { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; color: var(--color-ink); font-size: 14px; font-weight: 500; text-decoration: none; }
 .home-hero__prices:hover { color: var(--color-brand-dark); }
 .home-hero__next-step { display: flex; align-items: flex-start; gap: 9px; max-width: 490px; margin-top: 17px; color: #657086; font-size: 12px; line-height: 1.65; }
-.home-hero__next-step svg { flex-shrink: 0; margin-top: 1px; color: var(--color-brand-dark); }
+.home-hero__next-step svg { flex-shrink: 0; margin-top: 1px; color: var(--color-brand); }
 .home-hero__local { display: flex; align-items: center; gap: 9px; margin-top: 28px; padding-top: 18px; border-top: 1px solid rgba(10,17,40,.1); color: #59657b; font-size: 12px; }
-.home-hero__local svg { color: var(--color-brand-dark); flex-shrink: 0; }
+.home-hero__local svg { color: var(--color-brand); flex-shrink: 0; }
 .home-hero__offer { max-width: 1536px; margin-inline: auto; padding: 0 48px; }
 @media (min-width: 701px) and (max-width: 1100px) {
   .home-hero__content { padding-inline: 32px; }

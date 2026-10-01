@@ -11,7 +11,7 @@ import { Clock3, FileCheck2 } from '@lucide/vue'
           <h2 class="mt-4 max-w-[720px] text-balance text-3xl font-medium leading-[1.02] tracking-[-0.045em] text-ink md:text-5xl">Обсудите лечение с координатором</h2>
           <p class="mt-5 max-w-[620px] text-base leading-7 text-ink/65">Позвоните или напишите — подскажем, какой снимок нужен, как его передать и чего ожидать дальше.</p>
           <div class="mt-7 max-w-[760px]"><ContactChannels compact inline /></div>
-          <div class="mt-5 flex flex-wrap gap-x-6 gap-y-2 text-xs text-ink/65"><span class="flex items-center gap-2"><Clock3 aria-hidden="true" class="size-4 text-brand-dark" />Ответ координатора</span><span class="flex items-center gap-2"><FileCheck2 aria-hidden="true" class="size-4 text-brand-dark" />Без предоплаты и обязательств</span></div>
+          <div class="mt-5 flex flex-wrap gap-x-6 gap-y-2 text-xs text-ink/65"><span class="flex items-center gap-2"><Clock3 aria-hidden="true" class="size-4 text-brand" />Ответ координатора</span><span class="flex items-center gap-2"><FileCheck2 aria-hidden="true" class="size-4 text-brand" />Без предоплаты и обязательств</span></div>
         </div>
       </div>
     </section>
