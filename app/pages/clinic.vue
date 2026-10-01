@@ -33,7 +33,7 @@ const photos = [
         <div class="grid items-end gap-7 lg:grid-cols-[1.25fr_1fr] lg:gap-20">
           <div><p class="text-sm font-medium text-brand-dark">Клиника и врачи</p><h1 class="mt-5 text-[clamp(2.75rem,5.3vw,5.5rem)] font-medium leading-[1.02] tracking-[-.055em]">Клиника Жуйкан<br><span class="text-brand-dark">в Хэйхэ</span></h1></div>
           <div class="max-w-xl lg:pb-2">
-            <p class="text-base leading-7 text-ink/60 md:text-lg md:leading-8">Стоматологическое лечение в Хэйхэ — с вниманием к вашему здоровью и сопровождением на русском языке. Познакомьтесь с клиникой и командой ещё до поездки.</p>
+            <p class="text-base leading-7 text-muted md:text-lg md:leading-8">Стоматологическое лечение в Хэйхэ — с вниманием к вашему здоровью и сопровождением на русском языке. Познакомьтесь с клиникой и командой ещё до поездки.</p>
             <nav aria-label="Разделы страницы" class="mt-7 flex flex-wrap gap-x-6 gap-y-3 text-sm font-medium">
               <a v-for="item in [{id:'clinic-photos',label:'Клиника'},{id:'doctors',label:'Специалисты'},{id:'documents',label:'Документы'}]" :key="item.id" :href="'#'+item.id" class="inline-flex items-center gap-2">{{ item.label }}<ArrowDown aria-hidden="true" class="size-4 text-brand-dark" /></a>
             </nav>
@@ -48,14 +48,14 @@ const photos = [
             {title:'План начинается с диагностики',text:'Врач оценивает снимки и результаты осмотра, затем предлагает варианты лечения.'},
             {title:'Понятно на каждом этапе',text:'Русскоязычный координатор помогает с вопросами о лечении и организацией поездки.'},
             {title:'Рядом с Благовещенском',text:'Клиника находится в Хэйхэ. Обсудить поездку и предварительный план можно заранее.'}
-          ]" :key="fact.title"><p class="text-sm text-brand-dark">0{{ index + 1 }}</p><h2 class="mt-3 text-xl font-medium tracking-[-.03em]">{{ fact.title }}</h2><p class="mt-3 text-sm leading-6 text-ink/65">{{ fact.text }}</p></div>
+          ]" :key="fact.title"><p class="text-sm text-brand-dark">0{{ index + 1 }}</p><h2 class="mt-3 text-xl font-medium tracking-[-.03em]">{{ fact.title }}</h2><p class="mt-3 text-sm leading-6 text-muted">{{ fact.text }}</p></div>
         </div>
       </div>
     </section>
     <section id="clinic-photos" class="scroll-mt-28 px-5 py-10 md:px-8 lg:px-12 lg:py-16">
       <div class="mx-auto max-w-[1440px]">
         <p class="text-sm font-medium text-brand-dark">Внутри клиники</p><h2 class="mt-5 text-3xl font-medium leading-tight tracking-[-.045em] md:text-5xl">Увидеть всё до поездки</h2>
-        <p class="mt-5 max-w-xl leading-7 text-ink/60">Светлые кабинеты, просторный холл и зоны ожидания — посмотрите, где будет проходить ваш приём.</p>
+        <p class="mt-5 max-w-xl leading-7 text-muted">Светлые кабинеты, просторный холл и зоны ожидания — посмотрите, где будет проходить ваш приём.</p>
         <ClinicGallery :items="photos" class="mt-9" />
       </div>
     </section>

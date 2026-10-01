@@ -48,11 +48,11 @@ watch(() => route.path, () => nextTick(hit))
 <template>
   <aside v-if="visible" aria-label="Использование cookie" class="fixed bottom-4 left-4 z-[60] w-fit max-w-[calc(100vw-32px)] max-h-[calc(100dvh-32px)] overflow-auto rounded-2xl border border-ink/10 bg-white/95 p-3 text-ink shadow-[0_8px_32px_#0a112812] backdrop-blur-xl sm:bottom-6 sm:left-6 sm:max-w-[640px]">
     <div class="flex items-center gap-4">
-      <p class="min-w-0 flex-1 pl-1 text-[13px] leading-5 text-[#59657b]">
+      <p class="min-w-0 flex-1 pl-1 text-[13px] leading-5 text-muted">
         <template v-if="consent === 'accepted'">Аналитические <NuxtLink to="/privacy" class="text-brand-dark underline underline-offset-2">cookie</NuxtLink> разрешены.</template>
         <template v-else>Используем <NuxtLink to="/privacy" class="text-brand-dark underline underline-offset-2">куки</NuxtLink>, это делает удобнее вашу работу с сайтом</template>
       </p>
-      <button type="button" class="min-h-11 shrink-0 rounded-xl bg-brand-dark px-4 py-2.5 text-[13px] font-medium text-white hover:bg-brand-dark/90" @click="choose(consent === 'accepted' ? 'declined' : 'accepted')">{{ consent === 'accepted' ? 'Отключить' : 'Принять' }}</button>
+      <button type="button" class="min-h-11 shrink-0 rounded-xl bg-brand-soft px-4 py-2.5 text-[13px] font-medium text-brand-dark hover:bg-brand-soft-hover" @click="choose(consent === 'accepted' ? 'declined' : 'accepted')">{{ consent === 'accepted' ? 'Отключить' : 'Принять' }}</button>
     </div>
   </aside>
 </template>

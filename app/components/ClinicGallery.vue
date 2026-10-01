@@ -51,7 +51,7 @@ onBeforeUnmount(() => {
           <NuxtImg :src="item.image" :alt="item.alt" width="1280" height="720" format="webp" loading="lazy" class="aspect-[16/10] w-full object-cover transition-transform duration-300 motion-safe:group-hover:scale-[1.03]" />
           <span class="absolute bottom-3 right-3 grid size-8 place-items-center rounded-full bg-white/90 text-ink"><Expand aria-hidden="true" class="size-4" /></span>
         </div>
-        <p v-if="item.caption" class="mt-3 text-sm text-ink/60">{{ item.caption }}</p>
+        <p v-if="item.caption" class="mt-3 text-sm text-muted">{{ item.caption }}</p>
       </button>
     </div>
     <ClientOnly>

@@ -7,7 +7,7 @@ withDefaults(defineProps<{ compact?: boolean; dark?: boolean }>(), { compact: fa
     <div v-if="!compact" class="mb-6">
       <p class="text-xs font-extrabold uppercase tracking-[0.18em] text-brand-dark">Связь с координатором</p>
       <h3 class="mt-3 text-2xl font-semibold tracking-[-0.03em] md:text-3xl">Выберите удобный канал</h3>
-      <p class="mt-2 text-sm leading-6" :class="dark ? 'text-white/55' : 'text-ink/65'">Позвоните или напишите — координатор объяснит, как безопасно передать снимок.</p>
+      <p class="mt-2 text-sm leading-6" :class="dark ? 'text-white/55' : 'text-muted'">Позвоните или напишите — координатор объяснит, как безопасно передать снимок.</p>
     </div>
     <ContactChannels :compact="compact" :dark="dark" />
   </div>

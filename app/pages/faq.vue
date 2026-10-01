@@ -9,7 +9,7 @@ useSchemaOrg([defineWebPage({ name: 'Вопросы и ответы о лече�
     <section class="px-5 pb-8 pt-12 md:px-8 md:pt-20 lg:px-12">
       <div class="mx-auto max-w-[1440px]">
         <h1 class="max-w-[1000px] text-[clamp(2.5rem,5vw,4.5rem)] font-medium leading-[1.04] tracking-[-.045em]">Вопросы о лечении и поездке в Хэйхэ</h1>
-        <p class="mt-5 max-w-2xl text-base leading-7 text-ink/60">Собрали практические вопросы о лечении, поездке, документах и предварительном расчёте.</p>
+        <p class="mt-5 max-w-2xl text-base leading-7 text-muted">Собрали практические вопросы о лечении, поездке, документах и предварительном расчёте.</p>
         <div class="mt-8 md:mt-10"><FaqAccordion :heading-level="2" :items="faqs" :initial-open="faqs.map((_, index) => index)" /></div>
       </div>
     </section>

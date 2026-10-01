@@ -38,11 +38,11 @@ const image = computed(() => images[props.service.slug])
 
     <div class="flex flex-1 flex-col p-6 md:p-7">
       <h3 class="text-[clamp(1.5rem,2vw,2rem)] font-medium leading-[1.08] tracking-[-.035em] text-ink">{{ service.title }}</h3>
-      <p class="mt-3 max-w-md text-[15px] leading-6 text-ink/65">{{ service.short }}</p>
+      <p class="mt-3 max-w-md text-[15px] leading-6 text-muted">{{ service.short }}</p>
 
       <div class="mt-auto flex items-end justify-between gap-5 pt-8">
         <div>
-          <span class="block text-[11px] font-medium uppercase tracking-[.1em] text-ink/65">Стоимость</span>
+          <span class="block text-[11px] font-medium uppercase tracking-[.1em] text-muted">Стоимость</span>
           <span class="mt-1 block text-base font-medium text-brand-dark">{{ service.price }}</span>
         </div>
       </div>

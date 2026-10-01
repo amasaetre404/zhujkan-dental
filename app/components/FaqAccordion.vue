@@ -51,7 +51,7 @@ const toggle = (index: number) => {
         :inert="!isOpen(index)"
       >
         <div class="min-h-0 overflow-hidden">
-          <p class="max-w-none pb-1 pr-8 pt-3 text-[14px] font-medium leading-[1.4] text-ink/60 md:text-[14.5px]">
+          <p class="max-w-none pb-1 pr-8 pt-3 text-[14px] font-medium leading-[1.4] text-muted md:text-[14.5px]">
             {{ item.a }}
           </p>
         </div>
@@ -75,7 +75,7 @@ const toggle = (index: number) => {
   width: 18px;
   height: 18px;
   flex: 0 0 18px;
-  color: #087780;
+  color: var(--color-brand-dark);
 }
 
 .faq-mark::before,

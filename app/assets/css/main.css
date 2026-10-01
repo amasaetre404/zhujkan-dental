@@ -1,11 +1,19 @@
 @import "tailwindcss";
 
+/* Brand roles: logo/decorative accents, readable accent text, soft surfaces, hover and borders.
+   Keep component colors tied to these roles rather than choosing local shades. */
 @theme {
   --font-sans: "Inter", "Segoe UI", sans-serif;
   --color-ink: #0a1128;
-  --color-brand: #1bb9c4;
+  --color-brand: #1ebeca;
+  --color-brand-wordmark: #1badb8;
   --color-brand-dark: #087780;
-  --color-accent: #1bb9c4;
+  --color-brand-soft: #e2f5f5;
+  --color-brand-soft-hover: #cfeded;
+  --color-brand-border: rgba(8, 119, 128, .16);
+  --color-brand-border-hover: rgba(8, 119, 128, .25);
+  --color-muted: #59657b;
+  --color-accent: var(--color-brand);
   --color-mist: #f3f4f7;
   --color-paper: #f5f7fb;
 }
@@ -57,7 +65,7 @@ input:disabled,
 }
 
 :focus-visible {
-  outline: 3px solid rgba(27, 185, 196, .34);
+  outline: 3px solid rgba(30, 190, 202, .34);
   outline-offset: 3px;
 }
 
@@ -71,7 +79,7 @@ input:disabled,
 }
 
 .prose {
-  color: rgba(10, 17, 40, .68);
+  color: var(--color-muted);
   font-size: 1.0625rem;
   line-height: 1.8;
 }
@@ -93,7 +101,7 @@ input:disabled,
 }
 
 ::selection {
-  background: #c8eff1;
+  background: var(--color-brand-soft);
   color: #0a1128;
 }
 

@@ -9,9 +9,9 @@ import { Clock3, FileCheck2 } from '@lucide/vue'
         <div class="relative max-w-[870px] p-7 md:p-10 lg:p-12 xl:p-14">
           <p class="text-[15px] font-medium tracking-[-.01em] text-brand-dark">Следующий шаг</p>
           <h2 class="mt-4 max-w-[720px] text-balance text-3xl font-medium leading-[1.02] tracking-[-0.045em] text-ink md:text-5xl">Обсудите лечение с координатором</h2>
-          <p class="mt-5 max-w-[620px] text-base leading-7 text-ink/65">Позвоните или напишите — подскажем, какой снимок нужен, как его передать и чего ожидать дальше.</p>
+          <p class="mt-5 max-w-[620px] text-base leading-7 text-muted">Позвоните или напишите — подскажем, какой снимок нужен, как его передать и чего ожидать дальше.</p>
           <div class="mt-7 max-w-[760px]"><ContactChannels compact inline /></div>
-          <div class="mt-5 flex flex-wrap gap-x-6 gap-y-2 text-xs text-ink/65"><span class="flex items-center gap-2"><Clock3 aria-hidden="true" class="size-4 text-brand" />Ответ координатора</span><span class="flex items-center gap-2"><FileCheck2 aria-hidden="true" class="size-4 text-brand" />Без предоплаты и обязательств</span></div>
+          <div class="mt-5 flex flex-wrap gap-x-6 gap-y-2 text-xs text-muted"><span class="flex items-center gap-2"><Clock3 aria-hidden="true" class="size-4 text-brand" />Ответ координатора</span><span class="flex items-center gap-2"><FileCheck2 aria-hidden="true" class="size-4 text-brand" />Без предоплаты и обязательств</span></div>
         </div>
       </div>
     </section>
@@ -20,7 +20,7 @@ import { Clock3, FileCheck2 } from '@lucide/vue'
 <style scoped>
 @media (max-width: 639px) {
   .coordinator-cta-backdrop {
-    background: radial-gradient(ellipse at 100% 100%, rgba(27,185,196,.10), transparent 65%), linear-gradient(160deg, #fff 0%, #f5f7fb 60%, #edf7f8 100%);
+    background: radial-gradient(ellipse at 100% 100%, rgba(30, 190, 202,.10), transparent 65%), linear-gradient(160deg, #fff 0%, #f5f7fb 60%, var(--color-brand-soft) 100%);
   }
 }
 </style>

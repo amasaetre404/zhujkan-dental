@@ -120,7 +120,7 @@ const navigation = [
           v-for="item in navigation"
           :key="item.to"
           :to="item.to"
-          class="text-sm font-semibold text-ink/68 transition-colors hover:text-brand-dark"
+          class="text-sm font-semibold text-muted transition-colors hover:text-brand-dark"
           active-class="!text-brand-dark"
         >
           {{ item.label }}
@@ -182,13 +182,13 @@ const navigation = [
 .mobile-menu__header { display: flex; align-items: center; justify-content: space-between; flex-shrink: 0; min-height: 80px; padding: max(12px,env(safe-area-inset-top)) 20px 12px; border-bottom: 1px solid rgba(10,17,40,.08); }
 .mobile-menu__close { display: grid; place-items: center; flex-shrink: 0; width: 44px; height: 44px; border: 1px solid rgba(10,17,40,.12); border-radius: 12px; }
 .mobile-menu__body { display: flex; flex-direction: column; flex: 1; padding: 32px 24px max(24px,env(safe-area-inset-bottom)); }
-.mobile-menu__eyebrow { color: #59657b; font-size: 12px; line-height: 1.6; }
+.mobile-menu__eyebrow { color: var(--color-muted); font-size: 12px; line-height: 1.6; }
 .mobile-menu__links { display: grid; margin-top: 20px; margin-bottom: 36px; }
 .mobile-menu__link { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 72px; padding-block: 18px; border-bottom: 1px solid rgba(10,17,40,.09); font-size: clamp(23px,5.6vw,30px); font-weight: 500; line-height: 1.25; letter-spacing: -.03em; }
 .mobile-menu__link svg { flex-shrink: 0; color: var(--color-brand-dark); }
 .mobile-menu__link[aria-current="page"] { color: var(--color-brand-dark); }
 .mobile-menu__contact { display: grid; gap: 18px; margin-top: auto; padding-top: 20px; }
-.mobile-menu__contact > p { max-width: 280px; color: #59657b; font-size: 14px; line-height: 1.6; }
+.mobile-menu__contact > p { max-width: 280px; color: var(--color-muted); font-size: 14px; line-height: 1.6; }
 .mobile-menu__phone { display: inline-flex; align-items: center; gap: 10px; min-height: 44px; color: var(--color-brand-dark); font-size: 19px; font-weight: 500; white-space: nowrap; }
 .mobile-menu__cta { width: 100%; }
 .mobile-menu__cta :deep(.aura-button__pill) { width: 100%; justify-content: space-between; }

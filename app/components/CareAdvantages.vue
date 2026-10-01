@@ -57,7 +57,7 @@ const advantages = [
 .care-advantages__visual img { display: block; width: auto; max-width: 100%; height: auto; max-height: 100%; object-fit: contain; filter: brightness(1.055) saturate(.88); mix-blend-mode: multiply; mask-image: radial-gradient(ellipse at 50% 48%, #000 36%, rgba(0, 0, 0, .85) 55%, transparent 74%); }
 .care-advantages__copy { min-height: 156px; margin-top: 4px; padding: 4px 24px 28px; }
 .care-advantages h2 { color: var(--color-ink); font-size: clamp(18px, 1.45vw, 21px); line-height: 1.3; letter-spacing: -.035em; font-weight: 600; text-wrap: balance; }
-.care-advantages p { max-width: 290px; margin-top: 12px; color: #626c7d; font-size: 14px; line-height: 1.75; }
+.care-advantages p { max-width: 290px; margin-top: 12px; color: var(--color-muted); font-size: 14px; line-height: 1.75; }
 @media (min-width: 701px) and (max-width: 1100px) {
   .care-advantages { padding-inline: 32px; }
   .care-advantages__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }

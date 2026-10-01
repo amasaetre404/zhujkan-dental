@@ -15,7 +15,7 @@ export default defineNuxtConfig({
     head: {
       htmlAttrs: { lang: 'ru' },
       meta: [
-        { name: 'theme-color', content: '#1bb9c4' },
+        { name: 'theme-color', content: '#1ebeca' },
         { name: 'format-detection', content: 'telephone=no' },
       ],
       link: [

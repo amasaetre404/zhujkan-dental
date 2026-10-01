@@ -32,33 +32,33 @@ async function navigateTabs(event: KeyboardEvent, index: number) {
         <div role="tablist" aria-label="Категории стоматологических услуг" class="price-tabs mt-10 flex gap-2 overflow-x-auto border-b border-ink/10 pb-4 pt-1 md:mt-14">
           <button v-for="(category, index) in priceCategories" :id="'tab-' + category.id" :key="category.id" type="button" role="tab" :aria-selected="selected.id === category.id" :aria-controls="'panel-' + category.id" :tabindex="selected.id === category.id ? 0 : -1"
             class="shrink-0 rounded-xl px-5 py-3.5 text-sm font-medium transition-colors"
-            :class="selected.id === category.id ? 'bg-[#e2f5f5] text-brand-dark ring-1 ring-inset ring-brand/25' : 'text-[#59657b] hover:bg-[#e3f4f4] hover:text-brand-dark'"
+            :class="selected.id === category.id ? 'bg-brand-soft text-brand-dark ring-1 ring-inset ring-brand/25' : 'text-muted hover:bg-brand-soft hover:text-brand-dark'"
             @click="select(category.id)" @keydown="navigateTabs($event, index)">{{ category.title }}</button>
         </div>
 
         <section v-for="category in priceCategories" v-show="selected.id === category.id" :id="'panel-' + category.id" :key="category.id" role="tabpanel" :aria-labelledby="'tab-' + category.id" tabindex="0" class="pt-8 md:pt-10">
           <div class="mb-6 flex flex-wrap items-end justify-between gap-3">
-            <div><h2 class="text-2xl font-medium tracking-[-.035em] md:text-3xl">{{ category.title }}</h2><p class="mt-2 text-sm leading-6 text-[#657086]">{{ category.description }}</p></div>
+            <div><h2 class="text-2xl font-medium tracking-[-.035em] md:text-3xl">{{ category.title }}</h2><p class="mt-2 text-sm leading-6 text-muted">{{ category.description }}</p></div>
           </div>
           <table class="w-full table-fixed border-collapse text-left">
             <caption class="sr-only">Цены: {{ category.title }}</caption>
-            <thead><tr class="border-b border-ink/15 text-[11px] uppercase tracking-[.1em] text-[#657086]">
+            <thead><tr class="border-b border-ink/15 text-[11px] uppercase tracking-[.1em] text-muted">
               <th scope="col" class="hidden w-16 py-4 pl-5 font-medium md:table-cell">№</th>
               <th scope="col" class="py-4 pr-4 font-medium">Услуга</th>
               <th scope="col" class="w-[120px] py-4 text-right font-medium sm:w-[180px] md:pr-5">Стоимость</th>
             </tr></thead>
             <tbody>
-              <tr v-for="(item, index) in category.items" :key="item[0]" class="border-b border-ink/10 transition-colors hover:bg-[#edf8f8]">
-                <td class="hidden py-6 pl-5 text-sm tabular-nums text-ink/65 md:table-cell">{{ String(index + 1).padStart(2, '0') }}</td>
+              <tr v-for="(item, index) in category.items" :key="item[0]" class="border-b border-ink/10 transition-colors hover:bg-brand-soft">
+                <td class="hidden py-6 pl-5 text-sm tabular-nums text-muted md:table-cell">{{ String(index + 1).padStart(2, '0') }}</td>
                 <th scope="row" class="py-5 pr-4 text-[15px] font-medium leading-6 tracking-[-.02em] md:py-7 md:text-xl">{{ item[0] }}</th>
                 <td class="whitespace-nowrap py-5 text-right text-[15px] font-medium tabular-nums text-brand-dark md:py-7 md:pr-5 md:text-xl">{{ item[1] }}</td>
               </tr>
             </tbody>
           </table>
-          <p v-if="category.id === 'implant'" class="mt-4 text-xs leading-5 text-[#657086]">Стоимость Straumann уточняется: в разделах исходного прайса указаны разные суммы — 50 000 и 60 000 ₽. Состав услуги также необходимо согласовать с клиникой.</p>
+          <p v-if="category.id === 'implant'" class="mt-4 text-xs leading-5 text-muted">Стоимость Straumann уточняется: в разделах исходного прайса указаны разные суммы — 50 000 и 60 000 ₽. Состав услуги также необходимо согласовать с клиникой.</p>
         </section>
 
-        <p class="mt-7 max-w-[740px] text-xs leading-5 text-[#657086]">Начальные цены на имплантацию, коронки и съёмные протезы обновлены по данным клиники. Остальные позиции — по опубликованному прайсу. Цены не являются публичной офертой. Уточните актуальную стоимость и состав услуг перед поездкой. Пометка «от» обозначает начальную стоимость, а не окончательный бюджет лечения.</p>
+        <p class="mt-7 max-w-[740px] text-xs leading-5 text-muted">Начальные цены на имплантацию, коронки и съёмные протезы обновлены по данным клиники. Остальные позиции — по опубликованному прайсу. Цены не являются публичной офертой. Уточните актуальную стоимость и состав услуг перед поездкой. Пометка «от» обозначает начальную стоимость, а не окончательный бюджет лечения.</p>
       </div>
     </section>
     <RequestSection />

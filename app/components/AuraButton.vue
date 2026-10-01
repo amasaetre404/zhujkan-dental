@@ -95,9 +95,9 @@ watch(contactModal, (open) => {
   height: 100%;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 8px;
   overflow: clip;
-  padding: 5px 5px 5px 15px;
+  padding: 5px 16px;
   border-radius: 16px;
   text-decoration: none;
   will-change: transform;
@@ -134,9 +134,9 @@ watch(contactModal, (open) => {
 
 .aura-button__arrow {
   display: grid;
-  width: 40px;
-  height: 40px;
-  flex: 0 0 40px;
+  width: 20px;
+  height: 20px;
+  flex: 0 0 20px;
   place-items: center;
   border-radius: 11px;
   transition:
@@ -150,10 +150,10 @@ watch(contactModal, (open) => {
 }
 
 .aura-button--primary {
-  --aura-frame-border: transparent;
+  --aura-frame-border: var(--color-brand-dark);
   background: var(--color-brand-dark);
   color: #fff;
-  box-shadow: none;
+  box-shadow: 0 4px 12px -6px rgba(8, 119, 128, .3);
 }
 
 .aura-button--primary .aura-button__pill {
@@ -161,7 +161,7 @@ watch(contactModal, (open) => {
 }
 
 .aura-button--primary .aura-button__flood {
-  background: #fff;
+  background: var(--color-brand-dark);
 }
 
 .aura-button--primary .aura-button__arrow {
@@ -170,15 +170,15 @@ watch(contactModal, (open) => {
 }
 
 .aura-button--primary.is-hovered {
-  --aura-frame-border: rgba(10, 17, 40, .12);
-  background: rgba(255, 255, 255, .73);
-  color: #0a1128;
-  box-shadow: 0 18px 34px -18px rgba(8, 119, 128, .28);
+  --aura-frame-border: var(--color-brand-dark);
+  background: var(--color-brand-dark);
+  color: #fff;
+  box-shadow: 0 12px 24px -18px rgba(8, 119, 128, .4);
 }
 
 .aura-button--primary.is-hovered .aura-button__arrow {
   background: transparent;
-  color: #0a1128;
+  color: #fff;
 }
 
 .aura-button--secondary {
@@ -207,9 +207,9 @@ watch(contactModal, (open) => {
 }
 
 .aura-button--secondary.is-hovered {
-  --aura-frame-border: transparent;
-  background: var(--color-brand-dark);
-  color: #fff;
+  --aura-frame-border: var(--color-brand-border);
+  background: var(--color-brand-soft);
+  color: var(--color-brand-dark);
 }
 
 .aura-button--secondary.is-hovered .aura-button__flood {
@@ -217,12 +217,12 @@ watch(contactModal, (open) => {
   right: -210px;
   bottom: -200px;
   left: calc(100% - 250px);
-  background: var(--color-brand-dark);
+  background: var(--color-brand-soft);
 }
 
 .aura-button--secondary.is-hovered .aura-button__arrow {
   background: transparent;
-  color: #fff;
+  color: var(--color-brand-dark);
 }
 
 @media (prefers-reduced-motion: reduce) {

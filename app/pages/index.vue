@@ -26,11 +26,11 @@ useSchemaOrg([
       <div class="mx-auto max-w-[1440px]">
         <div class="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
           <div class="max-w-[780px]">
-            <p class="flex items-center gap-2.5 text-base font-medium text-ink/65"><span class="text-sm text-brand-dark" aria-hidden="true">◇</span>Услуги</p>
+            <p class="flex items-center gap-2.5 text-base font-medium text-muted"><span class="text-sm text-brand-dark" aria-hidden="true">◇</span>Услуги</p>
             <h2 class="mt-5 text-balance text-[clamp(3rem,5vw,4.5rem)] font-medium leading-[1] tracking-[-.05em] text-ink">Всё необходимое <span class="text-brand-dark">в одной клинике</span></h2>
           </div>
           <div class="max-w-[390px] lg:pb-1">
-            <p class="text-base leading-7 text-ink/65">Выберите услугу, чтобы узнать о подготовке, этапах, сроках и предварительной стоимости лечения.</p>
+            <p class="text-base leading-7 text-muted">Выберите услугу, чтобы узнать о подготовке, этапах, сроках и предварительной стоимости лечения.</p>
           </div>
         </div>
         <div class="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-3"><ServiceCard v-for="(service, index) in services" :key="service.slug" :service="service" /></div>
@@ -48,9 +48,9 @@ useSchemaOrg([
           <div class="relative max-w-[850px] p-7 md:p-10 lg:p-12 xl:p-14">
             <p class="text-[15px] font-medium tracking-[-.01em] text-brand-dark">Расчёт по снимку</p>
             <h2 class="mt-4 max-w-[720px] text-balance text-3xl font-medium leading-[1.02] tracking-[-.045em] text-ink md:text-5xl">Получите предварительный план до поездки</h2>
-            <p class="mt-5 max-w-[620px] text-base leading-7 text-ink/65">Свяжитесь с координатором и передайте панорамный снимок или КТ. Врач оценит ситуацию, возможные сроки и бюджет.</p>
+            <p class="mt-5 max-w-[620px] text-base leading-7 text-muted">Свяжитесь с координатором и передайте панорамный снимок или КТ. Врач оценит ситуацию, возможные сроки и бюджет.</p>
             <div class="mt-7 max-w-[760px]"><ContactChannels compact inline /></div>
-            <p class="mt-5 flex items-start gap-2 text-xs leading-5 text-ink/65"><BadgeCheck aria-hidden="true" class="mt-0.5 size-4 shrink-0 text-brand" />Финальный план лечения подтверждается после очной диагностики.</p>
+            <p class="mt-5 flex items-start gap-2 text-xs leading-5 text-muted"><BadgeCheck aria-hidden="true" class="mt-0.5 size-4 shrink-0 text-brand" />Финальный план лечения подтверждается после очной диагностики.</p>
           </div>
         </div>
       </div>
@@ -61,7 +61,7 @@ useSchemaOrg([
     <section class="bg-paper px-5 py-20 md:px-8 lg:px-12 lg:py-30">
       <div class="mx-auto max-w-[1440px]">
         <div class="mb-12 max-w-2xl md:mb-14">
-          <p class="text-base font-medium text-ink/65">Стоимость</p>
+          <p class="text-base font-medium text-muted">Стоимость</p>
           <h2 class="mt-4 text-balance text-5xl font-medium leading-[.98] tracking-[-0.055em] text-ink md:text-7xl">
             Лечение с понятной <span class="text-brand-dark">стоимостью</span>
           </h2>
@@ -73,11 +73,11 @@ useSchemaOrg([
             :key="service.slug"
             class="grid min-h-[100px] grid-cols-[28px_minmax(0,1fr)] items-center gap-x-4 gap-y-3 rounded-2xl border border-ink/8 px-5 py-5 md:grid-cols-[40px_minmax(0,1fr)_minmax(0,1fr)_118px] md:gap-6 md:py-[26px] lg:gap-8"
           >
-            <span class="text-lg font-medium text-ink/65">{{ String(index + 1).padStart(2, '0') }}</span>
+            <span class="text-lg font-medium text-muted">{{ String(index + 1).padStart(2, '0') }}</span>
             <h3 class="text-2xl font-semibold tracking-[-0.035em] text-ink md:text-3xl">{{ service.title }}</h3>
-            <p class="hidden text-sm leading-5 text-ink/60 md:block">{{ service.short }}</p>
+            <p class="hidden text-sm leading-5 text-muted md:block">{{ service.short }}</p>
             <div class="col-start-2 flex items-baseline gap-1.5 md:col-start-auto md:block">
-              <p v-if="service.price.startsWith('от ')" class="text-[10px] font-medium uppercase tracking-[.04em] text-ink/65">От</p>
+              <p v-if="service.price.startsWith('от ')" class="text-[10px] font-medium uppercase tracking-[.04em] text-muted">От</p>
               <p class="whitespace-nowrap text-xl font-medium leading-6 tracking-[-.025em] text-brand-dark md:mt-0.5">{{ service.price.replace(/^от\s*/i, '') }}</p>
             </div>
           </article>
@@ -90,7 +90,7 @@ useSchemaOrg([
     </section>
 
     <section id="trust" class="scroll-mt-24 px-5 pb-20 md:px-8 lg:px-12 lg:pb-30">
-      <div class="mx-auto grid max-w-[1440px] overflow-hidden rounded-[2.5rem] bg-[#e3f4f4] lg:grid-cols-2">
+      <div class="mx-auto grid max-w-[1440px] overflow-hidden rounded-[2.5rem] bg-brand-soft lg:grid-cols-2">
         <div class="p-7 md:p-12 lg:p-16"><SectionHeading eyebrow="Безопасность" title="Доверие строится на документах, а не обещаниях" text="До поездки пациент понимает, кто отвечает за сопровождение, какие документы выдаются и как действуют гарантийные условия." /><div class="mt-10 grid gap-5"><div v-for="item in ['Лицензия клиники и перевод документов', 'Согласованный план лечения', 'Документы после проведённых процедур', 'Связь с представителем после возвращения']" :key="item" class="flex items-center gap-3 font-semibold"><CircleCheck aria-hidden="true" class="size-5 shrink-0 text-brand" />{{ item }}</div></div><NuxtLink to="/clinic" class="mt-9 inline-flex items-center gap-2 font-bold text-brand-dark">О клинике и гарантиях <ArrowRight aria-hidden="true" class="size-4" /></NuxtLink></div>
         <figure class="relative m-0 min-h-[440px] overflow-hidden bg-[#dce5ed] sm:min-h-[540px] lg:min-h-0">
           <NuxtImg
@@ -115,13 +115,13 @@ useSchemaOrg([
     </section>
 
     <section class="bg-[linear-gradient(to_bottom,#f5f7fb_0%,#f3f4f7_18%,#f3f4f7_82%,#f5f7fb_100%)] px-5 py-20 md:px-8 lg:px-12 lg:py-30">
-      <div class="mx-auto max-w-[1440px]"><div class="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between"><SectionHeading eyebrow="Пациенты о поездке" title="Реальные истории важнее рекламных обещаний" /></div><div class="mt-12 grid gap-4 lg:grid-cols-3"><figure v-for="testimonial in testimonials" :key="testimonial.name" class="flex min-h-80 flex-col rounded-[1.75rem] bg-white p-7 md:p-8"><div class="flex gap-1 text-accent" role="img" aria-label="5 из 5"><Sparkles aria-hidden="true" v-for="n in 5" :key="n" class="size-4" /></div><blockquote class="mt-8 text-lg leading-8 text-ink/75">«{{ testimonial.quote }}»</blockquote><figcaption class="mt-auto pt-8"><p class="font-bold">{{ testimonial.name }}, {{ testimonial.city }}</p><p class="mt-1 text-sm text-ink/65">{{ testimonial.treatment }}</p></figcaption></figure></div></div>
+      <div class="mx-auto max-w-[1440px]"><div class="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between"><SectionHeading eyebrow="Пациенты о поездке" title="Реальные истории важнее рекламных обещаний" /></div><div class="mt-12 grid gap-4 lg:grid-cols-3"><figure v-for="testimonial in testimonials" :key="testimonial.name" class="flex min-h-80 flex-col rounded-[1.75rem] bg-white p-7 md:p-8"><div class="flex gap-1 text-accent" role="img" aria-label="5 из 5"><Sparkles aria-hidden="true" v-for="n in 5" :key="n" class="size-4" /></div><blockquote class="mt-8 text-lg leading-8 text-ink/75">«{{ testimonial.quote }}»</blockquote><figcaption class="mt-auto pt-8"><p class="font-bold">{{ testimonial.name }}, {{ testimonial.city }}</p><p class="mt-1 text-sm text-muted">{{ testimonial.treatment }}</p></figcaption></figure></div></div>
     </section>
 
 
     <section class="bg-paper px-5 pb-[72px] pt-20 md:px-6 md:pb-24 lg:pt-30">
       <div class="mx-auto flex max-w-[1440px] flex-col gap-10">
-        <div class="flex items-center gap-2.5 text-xl font-medium text-ink/65">
+        <div class="flex items-center gap-2.5 text-xl font-medium text-muted">
           <span class="text-sm text-brand-dark" aria-hidden="true">◇</span>
           <span>FAQ</span>
         </div>
@@ -132,7 +132,7 @@ useSchemaOrg([
               <span class="md:whitespace-nowrap"><span class="text-brand-dark">Вопросы</span>, которые задают</span><br class="hidden md:block" />
               <span class="md:whitespace-nowrap">перед поездкой</span>
             </h2>
-            <p class="w-full max-w-[300px] text-[13px] leading-[1.4] text-ink/65">
+            <p class="w-full max-w-[300px] text-[13px] leading-[1.4] text-muted">
               Короткие ответы о лечении, ценах и поездке. Если вашего вопроса здесь нет — координатор поможет.
             </p>
           </div>

@@ -84,9 +84,9 @@ onBeforeUnmount(() => observer?.disconnect())
           <g fill="none" stroke-linecap="round" stroke-linejoin="round">
             <path :d="route" stroke="white" stroke-width="14" />
             <path :d="route" stroke="#a9dfe3" stroke-width="3" />
-            <path :d="route" class="journey-map__route" pathLength="1" stroke="#1bb9c4" stroke-width="3.5" />
+            <path :d="route" class="journey-map__route" pathLength="1" stroke="var(--color-brand)" stroke-width="3.5" />
           </g>
-          <g fill="none" stroke="#1bb9c4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <g fill="none" stroke="var(--color-brand)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M-4-4 2 0-4 4" transform="translate(600 177.392) rotate(3.635)" />
             <path d="M-4-4 2 0-4 4" transform="translate(1210 423.889) rotate(115.346)" />
             <path d="M-4-4 2 0-4 4" transform="translate(899 580) rotate(180)" />
@@ -133,7 +133,7 @@ onBeforeUnmount(() => observer?.disconnect())
 .journey { padding: 64px 48px 70px; scroll-margin-top: 80px; }
 .journey__inner { max-width: 1440px; margin: auto; }
 .journey__header { display: flex; align-items: flex-end; justify-content: space-between; gap: 40px; }
-.journey__eyebrow { display: flex; align-items: center; gap: 10px; margin-bottom: 20px; color: #626c7d; font-size: 15px; }
+.journey__eyebrow { display: flex; align-items: center; gap: 10px; margin-bottom: 20px; color: var(--color-muted); font-size: 15px; }
 .journey__eyebrow span { color: var(--color-brand); }
 .journey h2 { font-size: clamp(38px, 4.3vw, 64px); font-weight: 500; line-height: 1.06; letter-spacing: -.055em; }
 .journey h2 span { color: var(--color-brand-dark); }
@@ -146,26 +146,26 @@ onBeforeUnmount(() => observer?.disconnect())
 /* Match the SVG camera's 120 / 1440 horizontal offset. */
 .journey-map__city--start { left: 3%; top: 4%; }
 .journey-map__city--end { left: 3%; top: 56%; }
-.journey-map__city p { color: #5d7083; font-size: 10px; font-weight: 600; letter-spacing: .13em; }
+.journey-map__city p { color: var(--color-muted); font-size: 10px; font-weight: 600; letter-spacing: .13em; }
 .journey-map__city p span { font-weight: 400; }
 .journey-map__city div { display: flex; align-items: center; gap: 7px; margin-top: 8px; font-size: clamp(21px, 2.1vw, 29px); font-weight: 500; letter-spacing: -.04em; }
 .journey-map__city svg { color: var(--color-brand); }
-.journey-map__city small { display: block; margin: 7px 0 0 26px; font-size: 12px; color: #626c7d; }
+.journey-map__city small { display: block; margin: 7px 0 0 26px; font-size: 12px; color: var(--color-muted); }
 .journey-map__steps { list-style: none; margin: 0; padding: 0; }
 .journey-map__step { position: absolute; left: calc(var(--x) - 8.333333%); top: var(--y); width: 18.5%; }
 .journey-map__number { position: absolute; top: -18px; left: -18px; display: grid; place-items: center; width: 36px; height: 36px; border: 1.5px solid var(--color-brand); border-radius: 50%; background: #f8faff; color: var(--color-brand-dark); font-size: 11px; font-weight: 600; box-shadow: 0 0 0 7px #f5f7f880; }
-.journey-map__number--end { background: var(--color-brand); color: var(--color-ink); box-shadow: 0 0 0 7px #1bb9c415, 0 0 0 15px #1bb9c408; }
+.journey-map__number--end { background: var(--color-brand); color: var(--color-ink); box-shadow: 0 0 0 7px #1ebeca15, 0 0 0 15px #1ebeca08; }
 .journey-map__copy { position: relative; margin: 37px 0 0 -18px; border-radius: 12px; background: #f5f7f8e8; box-shadow: 0 0 22px 16px #f5f7f8e8; }
 .journey-map__copy h3 { max-width: 235px; font-size: clamp(17px, 1.45vw, 21px); font-weight: 600; line-height: 1.3; letter-spacing: -.035em; text-wrap: balance; }
-.journey-map__copy p { margin-top: 11px; color: #586577; font-size: 14px; line-height: 1.75; }
-.journey-map__note { position: absolute; right: 32px; bottom: 27px; display: flex; align-items: center; gap: 9px; color: #667386; font-size: 11px; }
+.journey-map__copy p { margin-top: 11px; color: var(--color-muted); font-size: 14px; line-height: 1.75; }
+.journey-map__note { position: absolute; right: 32px; bottom: 27px; display: flex; align-items: center; gap: 9px; color: var(--color-muted); font-size: 11px; }
 .journey-map__note span { width: 20px; height: 2px; background: var(--color-brand); }
 .journey-map__crossing { display: none; }
 .journey__footer { display: flex; align-items: center; justify-content: space-between; gap: 28px; padding: 28px 0 0; }
 .journey__support { display: flex; align-items: center; gap: 16px; }
-.journey__support-icon { display: grid; place-items: center; flex-shrink: 0; width: 48px; height: 48px; background: #e3f4f4; border-radius: 50%; color: var(--color-brand); }
+.journey__support-icon { display: grid; place-items: center; flex-shrink: 0; width: 48px; height: 48px; background: var(--color-brand-soft); border-radius: 50%; color: var(--color-brand); }
 .journey__support p { font-size: 14px; font-weight: 500; line-height: 1.7; }
-.journey__support p span { display: block; color: #626c7d; font-size: 13px; font-weight: 400; }
+.journey__support p span { display: block; color: var(--color-muted); font-size: 13px; font-weight: 400; }
 @media (min-width: 901px) {
   .journey-map__step:nth-child(-n + 3) .journey-map__copy { margin-top: 48px; box-shadow: 0 8px 18px 8px #f5f7f8e8; }
   .journey-map__step:nth-child(2) .journey-map__copy { width: 100%; margin-top: 56px; margin-left: -35%; box-shadow: 0 8px 14px 4px #f5f7f8e8; }

@@ -8,7 +8,7 @@ import { contacts } from '~/data/contacts'
       <div class="flex flex-col gap-10 border-b border-ink/10 pb-7 xl:flex-row xl:justify-between xl:gap-16 lg:pb-8">
         <div class="max-w-[310px] shrink-0">
           <LogoMark />
-          <p class="mt-5 max-w-[310px] text-sm leading-6 text-[#59657b]">Стоматологическое лечение в Хэйхэ с предварительным расчётом и сопровождением из Благовещенска.</p>
+          <p class="mt-5 max-w-[310px] text-sm leading-6 text-muted">Стоматологическое лечение в Хэйхэ с предварительным расчётом и сопровождением из Благовещенска.</p>
           <nav aria-label="Мессенджеры и карты" class="mt-5 flex flex-wrap gap-1">
             <a
               v-for="item in [
@@ -59,7 +59,7 @@ import { contacts } from '~/data/contacts'
         </div>
         </div>
       </div>
-      <div class="flex flex-col gap-4 pt-7 text-xs leading-5 text-[#657086] md:flex-row md:items-center md:justify-between">
+      <div class="flex flex-col gap-4 pt-7 text-xs leading-5 text-muted md:flex-row md:items-center md:justify-between">
         <div><p>© {{ new Date().getFullYear() }} ГидМед</p><p class="mt-1">Организация поездок — <a href="https://turburo-prof.ru/" class="underline decoration-current/30 underline-offset-2 hover:decoration-current">Турбюро Профсоюзы</a></p></div>
         <div class="flex flex-col items-start gap-1 md:items-end md:text-right">
           <div class="flex flex-wrap gap-x-4 gap-y-1 md:justify-end">
@@ -74,14 +74,14 @@ import { contacts } from '~/data/contacts'
 
 <style scoped>
 .site-footer {
-  background: linear-gradient(180deg, #f5f7fb 0%, #edf6f6 38%, #e5f1f1 100%);
+  background: linear-gradient(180deg, #f5f7fb 0%, var(--color-brand-soft) 38%, var(--color-brand-soft) 100%);
 }
 .footer-heading {
   font-size: 11px;
   font-weight: 600;
   letter-spacing: .14em;
   text-transform: uppercase;
-  color: #59657b;
+  color: var(--color-muted);
   padding-top: 6px;
 }
 .footer-links {
@@ -89,12 +89,12 @@ import { contacts } from '~/data/contacts'
   gap: 8px;
   margin-top: 20px;
   font-size: 14px;
-  color: #344158;
+  color: var(--color-ink);
 }
 .footer-links a { padding-block: 5px; width: fit-content; }
 .site-footer :deep(a) { transition: color .18s ease; }
-.site-footer :deep(a:hover) { color: #087780; }
-.site-footer :deep(a:focus-visible) { outline: 2px solid #087780; outline-offset: 5px; border-radius: 3px; }
+.site-footer :deep(a:hover) { color: var(--color-brand-dark); }
+.site-footer :deep(a:focus-visible) { outline: 2px solid var(--color-brand-dark); outline-offset: 5px; border-radius: 3px; }
 @media (prefers-reduced-motion: reduce) {
   .site-footer :deep(a) { transition: none; }
 }

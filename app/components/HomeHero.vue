@@ -33,17 +33,17 @@ import HeroOffer from '~/components/HeroOffer.vue'
 .home-hero__wash { position: absolute; z-index: -1; inset: 0; background: linear-gradient(0deg, var(--color-paper), transparent 17%), linear-gradient(90deg, rgba(245,247,251,.48), rgba(245,247,251,.18) 45%, transparent 65%); }
 .home-hero__content { display: flex; align-items: center; min-height: inherit; max-width: 1536px; margin-inline: auto; padding: 16px 48px; }
 .home-hero__copy { width: 50%; max-width: 630px; min-width: 0; padding-block: 8px; }
-.home-hero__eyebrow { display: flex; align-items: center; gap: 10px; color: #536979; font-size: 12px; font-weight: 500; letter-spacing: .01em; }
+.home-hero__eyebrow { display: flex; align-items: center; gap: 10px; color: var(--color-muted); font-size: 12px; font-weight: 500; letter-spacing: .01em; }
 .home-hero__eyebrow > span { width: 7px; height: 7px; border-radius: 50%; background: var(--color-brand); }
 .home-hero h1 { margin-top: 26px; font-size: clamp(43px,4.2vw,67px); font-weight: 500; line-height: 1.05; letter-spacing: -.045em; text-wrap: balance; }
 .home-hero h1 span { color: var(--color-brand-dark); }
-.home-hero__intro { max-width: 510px; margin-top: 23px; color: #59657b; font-size: 16px; line-height: 1.8; text-wrap: pretty; }
+.home-hero__intro { max-width: 510px; margin-top: 23px; color: var(--color-muted); font-size: 16px; line-height: 1.8; text-wrap: pretty; }
 .home-hero__actions { display: flex; align-items: center; flex-wrap: wrap; gap: 18px 26px; margin-top: 27px; }
 .home-hero__prices { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; color: var(--color-ink); font-size: 14px; font-weight: 500; text-decoration: none; }
 .home-hero__prices:hover { color: var(--color-brand-dark); }
-.home-hero__next-step { display: flex; align-items: flex-start; gap: 9px; max-width: 490px; margin-top: 17px; color: #657086; font-size: 12px; line-height: 1.65; }
+.home-hero__next-step { display: flex; align-items: flex-start; gap: 9px; max-width: 490px; margin-top: 17px; color: var(--color-muted); font-size: 12px; line-height: 1.65; }
 .home-hero__next-step svg { flex-shrink: 0; margin-top: 1px; color: var(--color-brand); }
-.home-hero__local { display: flex; align-items: center; gap: 9px; margin-top: 28px; padding-top: 18px; border-top: 1px solid rgba(10,17,40,.1); color: #59657b; font-size: 12px; }
+.home-hero__local { display: flex; align-items: center; gap: 9px; margin-top: 28px; padding-top: 18px; border-top: 1px solid rgba(10,17,40,.1); color: var(--color-muted); font-size: 12px; }
 .home-hero__local svg { color: var(--color-brand); flex-shrink: 0; }
 .home-hero__offer { max-width: 1536px; margin-inline: auto; padding: 0 48px; }
 @media (min-width: 701px) and (max-width: 1100px) {
