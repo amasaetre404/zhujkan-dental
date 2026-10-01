@@ -1,12 +1,13 @@
 <script setup lang="ts">
-useSeoMeta({ title: 'Политика конфиденциальности', robots: 'noindex, follow' })
+usePageSeo('Политика конфиденциальности — ГидМед', 'Как ГидМед использует cookie и аналитику сайта, какие данные обрабатываются и как изменить настройки конфиденциальности.', '/privacy')
+useSeoMeta({ robots: 'noindex, follow' })
 const analyticsSettings = useAnalyticsSettings()
 </script>
 
 <template>
-  <main class="px-5 py-16 md:px-8 lg:px-12 lg:py-24">
+  <main id="main-content" tabindex="-1" class="px-5 py-16 md:px-8 lg:px-12 lg:py-24">
     <article class="prose mx-auto max-w-[900px]">
-      <p class="text-xs font-bold uppercase tracking-[.2em] text-brand">Конфиденциальность</p>
+      <p class="text-xs font-bold uppercase tracking-[.2em] text-brand-dark">Конфиденциальность</p>
       <h1>Ваши данные и аналитика сайта</h1>
       <p class="rounded-2xl border border-brand/15 bg-mist p-5 text-sm">Проект документа. Перед публикацией необходимо указать полное наименование и реквизиты оператора, контакт для обращений, уточнить условия хостинга и сроки хранения данных, а также согласовать текст с юристом.</p>
       <h2>О сайте</h2>
@@ -20,7 +21,7 @@ const analyticsSettings = useAnalyticsSettings()
       <h2>Ваш выбор</h2>
       <p>Отказ от аналитики не ограничивает использование сайта. Мы сохраняем выбор в техническом cookie gidmed-analytics-v1 на срок до 180 дней. Оно не используется для аналитики. При удалении cookie или использовании другого браузера выбор нужно сделать заново.</p>
       <p>Изменить решение можно через кнопку «Настройки аналитики» ниже. При отзыве согласия загруженный счётчик отключается и страница перезагружается. Это не удаляет уже переданные Яндексу данные. Сохранённые cookie можно удалить в настройках браузера.</p>
-      <button type="button" class="mt-5 rounded-xl bg-brand px-5 py-3 text-sm font-medium text-white hover:bg-brand-dark" @click="analyticsSettings = true">Настройки аналитики</button>
+      <button type="button" class="mt-5 rounded-xl bg-brand-dark px-5 py-3 text-sm font-medium text-white hover:bg-brand-dark/90" @click="analyticsSettings = true">Настройки аналитики</button>
       <h2>Техническая работа сайта</h2>
       <p>На странице контактов автоматически загружаются Яндекс Карты: браузер обращается к сервису Яндекса при открытии страницы. Загрузка карты не зависит от настройки аналитики.</p>
       <p>Для отображения страниц сервер получает технические сведения о запросе. На сайте также подключены шрифты Google Fonts: браузер обращается к серверам этого сервиса. Эти запросы не относятся к Яндекс Метрике и не управляются переключателем аналитики. Состав и сроки хранения серверных журналов необходимо уточнить у владельца и провайдера хостинга до публикации.</p>

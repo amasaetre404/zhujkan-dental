@@ -1,24 +1,24 @@
 <script setup lang="ts">
 const advantages = [
   {
-    image: '/images/benefit-estimate-v1.png',
+    image: '/images/benefit-estimate-v2.png',
     title: 'Стоимость до поездки',
     text: 'Предварительный план и ориентировочный бюджет — по вашему снимку.',
   },
   {
-    image: '/images/benefit-language-v1.png',
+    image: '/images/benefit-language-v2.png',
     title: 'На русском языке',
     text: 'Координатор помогает общаться с клиникой и остаётся на связи.',
   },
   {
-    image: '/images/benefit-office-v1.png',
+    image: '/images/benefit-office-v2.png',
     title: 'Представитель в России',
     text: 'Личный контакт и офис в Благовещенске — до и после лечения.',
   },
   {
-    image: '/images/benefit-documents-v1.png',
+    image: '/images/benefit-documents-v2.png',
     title: 'Документы и гарантии',
-    text: 'Условия лечения согласуем заранее и зафиксируем в документах.',
+    text: 'Условия лечения согласуем заранее и пропишем в коммерческом предложении.',
   },
 ]
 </script>

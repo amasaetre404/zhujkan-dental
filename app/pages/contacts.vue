@@ -5,7 +5,7 @@ usePageSeo('Контакты ГидМед в Благовещенске — Ги
 </script>
 
 <template>
-  <main class="px-5 pb-16 pt-10 md:px-8 lg:px-12 lg:pb-24 lg:pt-16">
+  <main id="main-content" tabindex="-1" class="px-5 pb-16 pt-10 md:px-8 lg:px-12 lg:pb-24 lg:pt-16">
     <div class="mx-auto max-w-[1440px]">
       <div class="grid items-end gap-7 lg:grid-cols-[1.2fr_1fr] lg:gap-20">
         <div><p class="text-sm font-medium text-brand-dark">Контакты</p><h1 class="mt-5 text-[clamp(2.75rem,5vw,5rem)] font-medium leading-[1.04] tracking-[-.055em]">Контакты<br><span class="text-brand-dark">в Благовещенске</span></h1></div>
@@ -19,22 +19,22 @@ usePageSeo('Контакты ГидМед в Благовещенске — Ги
             <h2 id="contact-title" class="mt-3 text-3xl font-medium tracking-[-.04em] xl:text-4xl">Турбюро Профсоюзы</h2>
 
             <div class="mt-7 flex gap-3">
-              <MapPin aria-hidden="true" class="mt-1 size-5 shrink-0 text-brand" />
-              <address class="text-base not-italic leading-7"><span class="font-medium">{{ contacts.address }}</span><br><span class="text-sm text-ink/55">{{ contacts.office }}</span></address>
+              <MapPin aria-hidden="true" class="mt-1 size-5 shrink-0 text-brand-dark" />
+              <address class="text-base not-italic leading-7"><span class="font-medium">{{ contacts.address }}</span><br><span class="text-sm text-ink/65">{{ contacts.office }}</span></address>
             </div>
 
             <div class="mt-5 flex gap-3">
-              <Clock3 aria-hidden="true" class="mt-0.5 size-5 shrink-0 text-brand" />
+              <Clock3 aria-hidden="true" class="mt-0.5 size-5 shrink-0 text-brand-dark" />
               <div class="min-w-0 flex-1">
                 <h3 class="text-sm font-medium">Часы работы</h3>
                 <dl class="mt-4 space-y-2.5 text-sm"><div v-for="row in officeHours" :key="row.days" class="flex flex-wrap justify-between gap-x-3 gap-y-1"><dt class="text-ink/60">{{ row.days }}</dt><dd class="whitespace-nowrap tabular-nums">{{ row.hours }}</dd></div></dl>
-                <p class="mt-4 text-xs leading-5 text-ink/45">Перерыв в будни: 13:00–14:00. Время Благовещенска (МСК +6).<br>В праздничные дни уточняйте график по телефону.</p>
+                <p class="mt-4 text-xs leading-5 text-ink/65">Перерыв в будни: 13:00–14:00. Время Благовещенска (МСК +6).<br>В праздничные дни уточняйте график по телефону.</p>
               </div>
             </div>
 
             <div class="mt-7 grid gap-6 border-y border-ink/8 py-6 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
-              <div class="flex gap-3"><Phone aria-hidden="true" class="mt-1 size-5 shrink-0 text-brand" /><div class="min-w-0"><p class="text-xs text-ink/45">Телефоны</p><a :href="contacts.phoneHref" class="mt-2 block whitespace-nowrap text-lg font-medium tracking-[-.025em] hover:text-brand">{{ contacts.phone }}</a><a :href="contacts.officePhoneHref" class="mt-2 block whitespace-nowrap text-sm hover:text-brand">{{ contacts.officePhone }} <span class="text-ink/45">· офис</span></a></div></div>
-              <div class="flex gap-3"><Mail aria-hidden="true" class="mt-1 size-5 shrink-0 text-brand" /><div class="min-w-0"><p class="text-xs text-ink/45">Электронная почта</p><a :href="'mailto:'+contacts.email" class="mt-2 block break-all text-sm leading-7 hover:text-brand">{{ contacts.email }}</a></div></div>
+              <div class="flex gap-3"><Phone aria-hidden="true" class="mt-1 size-5 shrink-0 text-brand-dark" /><div class="min-w-0"><p class="text-xs text-ink/65">Телефоны</p><a :href="contacts.phoneHref" class="mt-2 block whitespace-nowrap text-lg font-medium tracking-[-.025em] hover:text-brand-dark">{{ contacts.phone }}</a><a :href="contacts.officePhoneHref" class="mt-2 block whitespace-nowrap text-sm hover:text-brand-dark">{{ contacts.officePhone }} <span class="text-ink/65">· офис</span></a></div></div>
+              <div class="flex gap-3"><Mail aria-hidden="true" class="mt-1 size-5 shrink-0 text-brand-dark" /><div class="min-w-0"><p class="text-xs text-ink/65">Электронная почта</p><a :href="'mailto:'+contacts.email" class="mt-2 block break-all text-sm leading-7 hover:text-brand-dark">{{ contacts.email }}</a></div></div>
             </div>
 
             <div class="mt-6 flex flex-wrap gap-2">

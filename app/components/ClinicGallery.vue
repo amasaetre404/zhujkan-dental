@@ -7,7 +7,7 @@ const current = computed(() => props.items[active.value])
 const isOpen = ref(false)
 let previousOverflow = ''
 let trigger: HTMLElement | null = null
-function open(index: number, event: MouseEvent) {
+async function open(index: number, event: MouseEvent) {
   if (props.documents) return
   active.value = index
   trigger = event.currentTarget as HTMLElement
@@ -15,6 +15,7 @@ function open(index: number, event: MouseEvent) {
   document.documentElement.style.setProperty('--gallery-scrollbar-gap', `${window.innerWidth - document.documentElement.clientWidth}px`)
   document.body.style.overflow = 'hidden'
   isOpen.value = true
+  await nextTick()
   dialog.value?.showModal()
 }
 function close() { dialog.value?.close() }
@@ -41,23 +42,24 @@ onBeforeUnmount(() => {
   <div>
     <div v-if="documents" class="grid grid-cols-2 gap-4 sm:grid-cols-3 md:gap-6 lg:grid-cols-5">
       <div v-for="item in items" :key="item.image" class="overflow-hidden rounded-2xl border border-ink/8 bg-white p-4 md:rounded-[1.75rem] md:p-6">
-        <img :src="item.image" :alt="item.alt" loading="lazy" class="aspect-[3/4] w-full object-contain" />
+        <img :src="item.image" :alt="item.alt" width="900" height="1200" loading="lazy" class="aspect-[3/4] w-full object-contain" />
       </div>
     </div>
     <div v-else class="grid gap-4 sm:grid-cols-2 md:gap-6 lg:grid-cols-3">
       <button v-for="(item, index) in items" :key="item.image" type="button" class="group text-left" :aria-label="'Открыть: ' + item.alt" aria-haspopup="dialog" @click="open(index, $event)">
         <div class="relative overflow-hidden rounded-2xl bg-mist md:rounded-[1.75rem]">
           <NuxtImg :src="item.image" :alt="item.alt" width="1280" height="720" format="webp" loading="lazy" class="aspect-[16/10] w-full object-cover transition-transform duration-300 motion-safe:group-hover:scale-[1.03]" />
-          <span class="absolute bottom-3 right-3 grid size-8 place-items-center rounded-full bg-white/90 text-ink"><Expand class="size-4" /></span>
+          <span class="absolute bottom-3 right-3 grid size-8 place-items-center rounded-full bg-white/90 text-ink"><Expand aria-hidden="true" class="size-4" /></span>
         </div>
         <p v-if="item.caption" class="mt-3 text-sm text-ink/60">{{ item.caption }}</p>
       </button>
     </div>
+    <ClientOnly>
     <Teleport v-if="!documents" to="body">
       <dialog ref="dialog" aria-label="Просмотр фотографий клиники" class="clinic-lightbox" @close="restore" @click="($event.target === dialog) && close()" @keydown.left.prevent="move(-1)" @keydown.right.prevent="move(1)">
         <template v-if="isOpen && current">
           <span aria-live="polite" class="lightbox-count">{{ active + 1 }} / {{ items.length }}</span>
-          <button autofocus type="button" aria-label="Закрыть" class="lightbox-control lightbox-close" @click="close"><X class="size-5" /></button>
+          <button autofocus type="button" aria-label="Закрыть" class="lightbox-control lightbox-close" @click="close"><X aria-hidden="true" class="size-5" /></button>
           <nav aria-label="Миниатюры фотографий" class="lightbox-thumbnails">
             <button v-for="(item, index) in items" :key="item.image" type="button" :aria-label="'Показать: ' + item.alt" :aria-current="index === active ? 'true' : undefined" class="lightbox-thumbnail" @click="active = index">
               <NuxtImg :src="item.image" alt="" width="160" height="120" format="webp" class="size-full object-cover" />
@@ -66,11 +68,12 @@ onBeforeUnmount(() => {
           <div class="lightbox-stage" @click.self="close">
             <img :src="current.image" :alt="current.alt" class="lightbox-image" />
           </div>
-          <button v-if="items.length > 1" type="button" aria-label="Предыдущее изображение" class="lightbox-control lightbox-prev" @click="move(-1)"><ChevronLeft class="size-5" /></button>
-          <button v-if="items.length > 1" type="button" aria-label="Следующее изображение" class="lightbox-control lightbox-next" @click="move(1)"><ChevronRight class="size-5" /></button>
+          <button v-if="items.length > 1" type="button" aria-label="Предыдущее изображение" class="lightbox-control lightbox-prev" @click="move(-1)"><ChevronLeft aria-hidden="true" class="size-5" /></button>
+          <button v-if="items.length > 1" type="button" aria-label="Следующее изображение" class="lightbox-control lightbox-next" @click="move(1)"><ChevronRight aria-hidden="true" class="size-5" /></button>
         </template>
       </dialog>
     </Teleport>
+    </ClientOnly>
   </div>
 </template>
 

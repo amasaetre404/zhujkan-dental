@@ -51,7 +51,7 @@ onBeforeUnmount(unlockScroll)
   <Teleport to="body">
     <dialog ref="dialog" class="contact-modal" aria-labelledby="contact-modal-title" aria-describedby="contact-modal-description" @keydown="trapFocus" @cancel.prevent="close" @close="close" @click="($event.target === dialog) && close()">
       <div class="relative isolate overflow-hidden rounded-[inherit] bg-paper">
-        <NuxtImg src="/images/contact-illustration-v2.png" alt="" width="1680" height="945" format="webp" class="pointer-events-none absolute right-0 top-0 -z-10 h-[330px] w-full object-cover object-right opacity-35 sm:h-full sm:w-[75%] sm:opacity-80" />
+        <NuxtImg src="/images/contact-illustration-v3.png" alt="" width="1680" height="945" format="webp" class="pointer-events-none absolute right-0 top-0 -z-10 h-[330px] w-full object-cover object-right opacity-35 sm:h-full sm:w-[75%] sm:opacity-80" />
         <div class="pointer-events-none absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(245,247,251,1)_0%,rgba(245,247,251,.96)_44%,rgba(245,247,251,.45)_100%)]" />
         <button type="button" autofocus aria-label="Закрыть окно" class="absolute right-4 top-4 grid size-11 place-items-center rounded-full border border-ink/10 bg-white/90 text-ink transition-colors hover:bg-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand" @click="close"><X aria-hidden="true" class="size-5" /></button>
         <div class="p-6 pt-16 sm:p-10 sm:pt-14 lg:p-12">
@@ -59,7 +59,7 @@ onBeforeUnmount(unlockScroll)
           <h2 id="contact-modal-title" class="mt-4 max-w-[520px] text-[32px] font-medium leading-[1.08] tracking-[-.04em] sm:text-[44px]">Обсудите лечение<br>с координатором</h2>
           <p id="contact-modal-description" class="mt-5 max-w-[470px] text-base leading-7 text-[#59657b]">Позвоните или напишите нам. Подскажем, какой снимок нужен, как его передать и с чего начать подготовку к поездке.</p>
           <div class="mt-7"><ContactChannels compact inline /></div>
-          <p class="mt-5 flex items-center gap-2 text-xs leading-5 text-[#59657b]"><FileCheck2 aria-hidden="true" class="size-4 shrink-0 text-brand" />Без предоплаты и обязательств</p>
+          <p class="mt-5 flex items-center gap-2 text-xs leading-5 text-[#59657b]"><FileCheck2 aria-hidden="true" class="size-4 shrink-0 text-brand-dark" />Без предоплаты и обязательств</p>
         </div>
       </div>
     </dialog>

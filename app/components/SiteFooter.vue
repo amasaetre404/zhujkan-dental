@@ -74,7 +74,7 @@ import { contacts } from '~/data/contacts'
 
 <style scoped>
 .site-footer {
-  background: linear-gradient(180deg, #f5f7fb 0%, #edf2f9 38%, #e9eff8 100%);
+  background: linear-gradient(180deg, #f5f7fb 0%, #edf6f6 38%, #e5f1f1 100%);
 }
 .footer-heading {
   font-size: 11px;
@@ -93,8 +93,8 @@ import { contacts } from '~/data/contacts'
 }
 .footer-links a { padding-block: 5px; width: fit-content; }
 .site-footer :deep(a) { transition: color .18s ease; }
-.site-footer :deep(a:hover) { color: #3449c7; }
-.site-footer :deep(a:focus-visible) { outline: 2px solid #536bff; outline-offset: 5px; border-radius: 3px; }
+.site-footer :deep(a:hover) { color: #087780; }
+.site-footer :deep(a:focus-visible) { outline: 2px solid #087780; outline-offset: 5px; border-radius: 3px; }
 @media (prefers-reduced-motion: reduce) {
   .site-footer :deep(a) { transition: none; }
 }

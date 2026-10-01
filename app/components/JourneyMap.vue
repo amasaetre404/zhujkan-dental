@@ -4,7 +4,7 @@ import { Languages, MapPin } from '@lucide/vue'
 const steps = [
   { title: 'Знакомимся с вашей ситуацией', text: 'Расскажите, что беспокоит, и пришлите снимок. Если его нет — подскажем, где сделать.', x: 25, y: 20 },
   { title: 'План и стоимость — заранее', text: 'По снимку подготовим предварительный план, сроки и ориентировочный бюджет.', x: 61.105, y: 24.4215 },
-  { title: 'Готовимся к поездке', text: 'Согласуем дату и расскажем, какие документы и вещи взять с собой.', x: 86.6674, y: 42.5842 },
+  { title: 'Готовимся к поездке', text: 'Согласуем дату, организуем билеты, трансферы и гостиницу с завтраками.', x: 86.6674, y: 42.5842 },
   { title: 'Встречаем и сопровождаем', text: 'Представитель поможет добраться из Благовещенска до клиники в Хэйхэ.', x: 76, y: 72.5 },
   { title: 'Проходите лечение', text: 'Врач уточнит план после диагностики. Рядом — русскоязычное сопровождение.', x: 48, y: 72.5 },
   { title: 'Домой, оставаясь на связи', text: 'После возвращения вы можете обратиться к координатору с вопросами.', x: 20, y: 72.5 },
@@ -83,10 +83,10 @@ onBeforeUnmount(() => observer?.disconnect())
           <text x="754" y="418" fill="#84918f" font-size="12" letter-spacing="2" transform="rotate(16 754 418)">о. Большой Хэйхэ</text>
           <g fill="none" stroke-linecap="round" stroke-linejoin="round">
             <path :d="route" stroke="white" stroke-width="14" />
-            <path :d="route" stroke="#b9c6f3" stroke-width="3" />
-            <path :d="route" class="journey-map__route" pathLength="1" stroke="#4d6bff" stroke-width="3.5" />
+            <path :d="route" stroke="#a9dfe3" stroke-width="3" />
+            <path :d="route" class="journey-map__route" pathLength="1" stroke="#1bb9c4" stroke-width="3.5" />
           </g>
-          <g fill="none" stroke="#4d6bff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <g fill="none" stroke="#1bb9c4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M-4-4 2 0-4 4" transform="translate(600 177.392) rotate(3.635)" />
             <path d="M-4-4 2 0-4 4" transform="translate(1210 423.889) rotate(115.346)" />
             <path d="M-4-4 2 0-4 4" transform="translate(899 580) rotate(180)" />
@@ -113,7 +113,7 @@ onBeforeUnmount(() => observer?.disconnect())
                 <path d="M95 79 171 90 201 105 138 95Z" fill="#dfe9df" />
                 <text x="238" y="83" fill="#708da7" font-size="12" letter-spacing="7" transform="rotate(15 238 83)">АМУР</text>
               </svg>
-              <div class="journey-map__city"><p>КИТАЙ · ЛЕЧЕНИЕ И ЗАБОТА</p><div><MapPin :size="19" /> Хэйхэ</div></div>
+              <div class="journey-map__city"><p>КИТАЙ · ЛЕЧЕНИЕ И ЗАБОТА</p><div><MapPin aria-hidden="true" :size="19" /> Хэйхэ</div></div>
             </div>
             <span class="journey-map__number" :class="{ 'journey-map__number--end': index === steps.length - 1 }" aria-hidden="true">{{ String(index + 1).padStart(2, '0') }}</span>
             <div class="journey-map__copy"><h3>{{ step.title }}</h3><p>{{ step.text }}</p></div>
@@ -154,7 +154,7 @@ onBeforeUnmount(() => observer?.disconnect())
 .journey-map__steps { list-style: none; margin: 0; padding: 0; }
 .journey-map__step { position: absolute; left: calc(var(--x) - 8.333333%); top: var(--y); width: 18.5%; }
 .journey-map__number { position: absolute; top: -18px; left: -18px; display: grid; place-items: center; width: 36px; height: 36px; border: 1.5px solid var(--color-brand); border-radius: 50%; background: #f8faff; color: var(--color-brand-dark); font-size: 11px; font-weight: 600; box-shadow: 0 0 0 7px #f5f7f880; }
-.journey-map__number--end { background: var(--color-brand); color: white; box-shadow: 0 0 0 7px #4d6bff15, 0 0 0 15px #4d6bff08; }
+.journey-map__number--end { background: var(--color-brand); color: white; box-shadow: 0 0 0 7px #1bb9c415, 0 0 0 15px #1bb9c408; }
 .journey-map__copy { position: relative; margin: 37px 0 0 -18px; border-radius: 12px; background: #f5f7f8e8; box-shadow: 0 0 22px 16px #f5f7f8e8; }
 .journey-map__copy h3 { max-width: 235px; font-size: clamp(17px, 1.45vw, 21px); font-weight: 600; line-height: 1.3; letter-spacing: -.035em; text-wrap: balance; }
 .journey-map__copy p { margin-top: 11px; color: #586577; font-size: 14px; line-height: 1.75; }
@@ -163,7 +163,7 @@ onBeforeUnmount(() => observer?.disconnect())
 .journey-map__crossing { display: none; }
 .journey__footer { display: flex; align-items: center; justify-content: space-between; gap: 28px; padding: 28px 0 0; }
 .journey__support { display: flex; align-items: center; gap: 16px; }
-.journey__support-icon { display: grid; place-items: center; flex-shrink: 0; width: 48px; height: 48px; background: #e9edfa; border-radius: 50%; color: var(--color-brand-dark); }
+.journey__support-icon { display: grid; place-items: center; flex-shrink: 0; width: 48px; height: 48px; background: #e3f4f4; border-radius: 50%; color: var(--color-brand-dark); }
 .journey__support p { font-size: 14px; font-weight: 500; line-height: 1.7; }
 .journey__support p span { display: block; color: #626c7d; font-size: 13px; font-weight: 400; }
 @media (min-width: 901px) {

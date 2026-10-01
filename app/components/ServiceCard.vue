@@ -4,12 +4,15 @@ import type { Service } from '~/data/content'
 const props = defineProps<{ service: Service }>()
 
 const images: Record<string, { src: string; alt: string; position?: string }> = {
-  implantation: { src: '/images/service-implant-planning.png', alt: 'Цифровое планирование установки импланта' },
-  prosthetics: { src: '/images/service-prosthetics-digital.png', alt: 'Цифровое планирование мостов и зубных протезов' },
+  diagnostics: { src: '/images/service-diagnostics-v1.png', alt: 'Обсуждение панорамного снимка зубов в клинике' },
+  hygiene: { src: '/images/service-hygiene-v1.png', alt: 'Профессиональная гигиена зубов — иллюстративное изображение' },
+  implantation: { src: '/images/service-implant-planning-turquoise-v1.png', alt: 'Цифровое планирование установки импланта' },
+  'removable-prosthetics': { src: '/images/service-removable-denture-v1.png', alt: 'Съёмный протез с естественным оттенком зубов в зуботехнической лаборатории' },
+  veneers: { src: '/images/service-veneers-v1.png', alt: 'Тонкие керамические виниры и работа зубного техника' },
   crowns: { src: '/images/service-crowns-lab.png', alt: 'Керамические и циркониевые коронки', position: 'object-[58%_center]' },
   treatment: { src: '/images/service-restorative-treatment-v3.png', alt: 'Лечение зуба врачом клиники под изоляцией коффердамом' },
   extraction: { src: '/images/service-extraction-consultation-v2.png', alt: 'Консультация врача по панорамному снимку перед удалением зуба' },
-  orthodontics: { src: '/images/service-digital-scan.png', alt: 'Цифровое сканирование для ортодонтического лечения', position: 'object-[62%_center]' },
+  orthodontics: { src: '/images/service-digital-scan-turquoise-v1.png', alt: 'Цифровое сканирование для ортодонтического лечения', position: 'object-[62%_center]' },
 }
 
 const image = computed(() => images[props.service.slug])
@@ -35,11 +38,11 @@ const image = computed(() => images[props.service.slug])
 
     <div class="flex flex-1 flex-col p-6 md:p-7">
       <h3 class="text-[clamp(1.5rem,2vw,2rem)] font-medium leading-[1.08] tracking-[-.035em] text-ink">{{ service.title }}</h3>
-      <p class="mt-3 max-w-md text-[15px] leading-6 text-ink/55">{{ service.short }}</p>
+      <p class="mt-3 max-w-md text-[15px] leading-6 text-ink/65">{{ service.short }}</p>
 
       <div class="mt-auto flex items-end justify-between gap-5 pt-8">
         <div>
-          <span class="block text-[11px] font-medium uppercase tracking-[.1em] text-ink/34">Стоимость</span>
+          <span class="block text-[11px] font-medium uppercase tracking-[.1em] text-ink/65">Стоимость</span>
           <span class="mt-1 block text-base font-medium text-brand-dark">{{ service.price }}</span>
         </div>
       </div>

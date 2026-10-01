@@ -10,7 +10,7 @@ import { clinicSpecialists } from '~/data/clinic-specialists'
       <div class="mt-10 grid grid-cols-2 gap-x-4 gap-y-8 md:gap-x-6 md:gap-y-10 lg:grid-cols-4">
         <article v-for="doctor in clinicSpecialists" :key="doctor.id">
           <div class="overflow-hidden rounded-2xl bg-mist md:rounded-[1.75rem]"><NuxtImg :src="doctor.image" :alt="doctor.name" width="630" height="887" format="webp" loading="lazy" class="aspect-[3/4] w-full object-cover object-top" /></div>
-          <h3 class="mt-4 text-lg font-medium tracking-[-.03em] md:text-2xl">{{ doctor.name }}</h3><p class="mt-1 text-sm text-ink/55">{{ doctor.role }}</p>
+          <h3 class="mt-4 text-lg font-medium tracking-[-.03em] md:text-2xl">{{ doctor.name }}</h3><p class="mt-1 text-sm text-ink/65">{{ doctor.role }}</p>
         </article>
       </div>
     </div>

@@ -2,8 +2,10 @@
 const props = withDefaults(defineProps<{
   items: Array<{ q: string, a: string }>
   initialOpen?: number[]
+  headingLevel?: 2 | 3
 }>(), {
   initialOpen: () => [0, 1, 2],
+  headingLevel: 3,
 })
 
 const accordionId = useId()
@@ -23,10 +25,9 @@ const toggle = (index: number) => {
     <article
       v-for="(item, index) in items"
       :key="item.q"
-      class="faq-card cursor-pointer rounded-[18px] bg-white px-6 py-5"
-      @click="toggle(index)"
+      class="faq-card rounded-[18px] bg-white px-6 py-5"
     >
-      <h3>
+      <component :is="`h${headingLevel}`">
         <button
           :id="`${accordionId}-trigger-${index}`"
           type="button"
@@ -38,7 +39,7 @@ const toggle = (index: number) => {
           <span class="text-pretty">{{ item.q }}</span>
           <span class="faq-mark" :class="{ 'faq-mark--open': isOpen(index) }" aria-hidden="true" />
         </button>
-      </h3>
+      </component>
 
       <div
         :id="`${accordionId}-panel-${index}`"
@@ -74,7 +75,7 @@ const toggle = (index: number) => {
   width: 18px;
   height: 18px;
   flex: 0 0 18px;
-  color: #1b3bd6;
+  color: #087780;
 }
 
 .faq-mark::before,

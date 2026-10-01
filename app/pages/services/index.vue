@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { priceCategories } from '~/data/prices'
-usePageSeo('Цены на лечение зубов в Хэйхэ — ГидМед', 'Прайс стоматологии Жуйкан в Хэйхэ: лечение зубов, имплантация, протезирование и коронки. Стоимость услуг и предварительный расчёт перед поездкой в Китай.', '/services')
+usePageSeo('Цены на лечение зубов в Хэйхэ — ГидМед', 'Прайс стоматологии Жуйкан в Хэйхэ: имплантация, коронки, виниры, съёмные протезы и лечение зубов. Стоимость услуг и предварительный расчёт перед поездкой в Китай.', '/services')
 const route = useRoute()
 const router = useRouter()
 const selected = computed(() => priceCategories.find(item => item.id === route.query.category) ?? priceCategories[0])
@@ -21,7 +21,7 @@ async function navigateTabs(event: KeyboardEvent, index: number) {
 </script>
 
 <template>
-  <main>
+  <main id="main-content" tabindex="-1">
     <section class="px-5 pb-8 pt-12 md:px-8 md:pt-20 lg:px-12">
       <div class="mx-auto max-w-[1440px]">
         <p class="text-sm font-medium text-brand-dark">Услуги и цены</p>
@@ -32,7 +32,7 @@ async function navigateTabs(event: KeyboardEvent, index: number) {
         <div role="tablist" aria-label="Категории стоматологических услуг" class="price-tabs mt-10 flex gap-2 overflow-x-auto border-b border-ink/10 pb-4 pt-1 md:mt-14">
           <button v-for="(category, index) in priceCategories" :id="'tab-' + category.id" :key="category.id" type="button" role="tab" :aria-selected="selected.id === category.id" :aria-controls="'panel-' + category.id" :tabindex="selected.id === category.id ? 0 : -1"
             class="shrink-0 rounded-xl px-5 py-3.5 text-sm font-medium transition-colors"
-            :class="selected.id === category.id ? 'bg-brand text-white' : 'text-[#59657b] hover:bg-[#e8eefc] hover:text-brand-dark'"
+            :class="selected.id === category.id ? 'bg-brand-dark text-white' : 'text-[#59657b] hover:bg-[#e3f4f4] hover:text-brand-dark'"
             @click="select(category.id)" @keydown="navigateTabs($event, index)">{{ category.title }}</button>
         </div>
 
@@ -48,8 +48,8 @@ async function navigateTabs(event: KeyboardEvent, index: number) {
               <th scope="col" class="w-[120px] py-4 text-right font-medium sm:w-[180px] md:pr-5">Стоимость</th>
             </tr></thead>
             <tbody>
-              <tr v-for="(item, index) in category.items" :key="item[0]" class="border-b border-ink/10 transition-colors hover:bg-[#edf1fa]">
-                <td class="hidden py-6 pl-5 text-sm tabular-nums text-ink/40 md:table-cell">{{ String(index + 1).padStart(2, '0') }}</td>
+              <tr v-for="(item, index) in category.items" :key="item[0]" class="border-b border-ink/10 transition-colors hover:bg-[#edf8f8]">
+                <td class="hidden py-6 pl-5 text-sm tabular-nums text-ink/65 md:table-cell">{{ String(index + 1).padStart(2, '0') }}</td>
                 <th scope="row" class="py-5 pr-4 text-[15px] font-medium leading-6 tracking-[-.02em] md:py-7 md:text-xl">{{ item[0] }}</th>
                 <td class="whitespace-nowrap py-5 text-right text-[15px] font-medium tabular-nums text-brand-dark md:py-7 md:pr-5 md:text-xl">{{ item[1] }}</td>
               </tr>
@@ -58,7 +58,7 @@ async function navigateTabs(event: KeyboardEvent, index: number) {
           <p v-if="category.id === 'implant'" class="mt-4 text-xs leading-5 text-[#657086]">Стоимость Straumann уточняется: в разделах исходного прайса указаны разные суммы — 50 000 и 60 000 ₽. Состав услуги также необходимо согласовать с клиникой.</p>
         </section>
 
-        <p class="mt-7 max-w-[740px] text-xs leading-5 text-[#657086]">Цены приведены по опубликованному прайсу клиники и не являются публичной офертой. Уточните актуальную стоимость и состав услуг перед поездкой. Пометка «от» обозначает начальную стоимость, а не окончательный бюджет лечения.</p>
+        <p class="mt-7 max-w-[740px] text-xs leading-5 text-[#657086]">Начальные цены на имплантацию, коронки и съёмные протезы обновлены по данным клиники. Остальные позиции — по опубликованному прайсу. Цены не являются публичной офертой. Уточните актуальную стоимость и состав услуг перед поездкой. Пометка «от» обозначает начальную стоимость, а не окончательный бюджет лечения.</p>
       </div>
     </section>
     <RequestSection />
@@ -66,5 +66,5 @@ async function navigateTabs(event: KeyboardEvent, index: number) {
 </template>
 
 <style scoped>
-.price-tabs { scrollbar-width: thin; scrollbar-color: #c7d1ed transparent; }
+.price-tabs { scrollbar-width: thin; scrollbar-color: #acdadd transparent; }
 </style>

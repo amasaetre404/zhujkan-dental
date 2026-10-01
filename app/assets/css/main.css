@@ -3,9 +3,9 @@
 @theme {
   --font-sans: "Inter", "Segoe UI", sans-serif;
   --color-ink: #0a1128;
-  --color-brand: #4d6bff;
-  --color-brand-dark: #1b3bd6;
-  --color-accent: #4d6bff;
+  --color-brand: #1bb9c4;
+  --color-brand-dark: #087780;
+  --color-accent: #1bb9c4;
   --color-mist: #f3f4f7;
   --color-paper: #f5f7fb;
 }
@@ -57,7 +57,7 @@ input:disabled,
 }
 
 :focus-visible {
-  outline: 3px solid rgba(77, 107, 255, .34);
+  outline: 3px solid rgba(27, 185, 196, .34);
   outline-offset: 3px;
 }
 
@@ -93,6 +93,12 @@ input:disabled,
 }
 
 ::selection {
-  background: #dce3ff;
+  background: #c8eff1;
   color: #0a1128;
 }
+
+/* Keyboard users can bypass repeated navigation on every page. */
+.skip-link { position: fixed; z-index: 100; top: 12px; left: 12px; padding: 12px 18px; border-radius: 12px; background: #fff; color: var(--color-brand-dark); transform: translateY(-200%); }
+.skip-link:focus { transform: translateY(0); }
+#main-content { scroll-margin-top: 100px; }
+.prose a { text-decoration: underline; text-underline-offset: 3px; }

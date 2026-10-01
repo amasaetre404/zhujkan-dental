@@ -4,6 +4,7 @@ export function usePageSeo(title: string, description: string, path: string) {
   const url = new URL(path, site.url).href
   const image = new URL('/images/clinic/clinic-exterior-front.png', site.url).href
 
+  useSchemaOrg([defineWebPage({ description, inLanguage: 'ru-RU' })])
   useHead({ titleTemplate: null, link: [{ rel: 'canonical', href: url }] })
   useSeoMeta({
     title,
@@ -15,6 +16,9 @@ export function usePageSeo(title: string, description: string, path: string) {
     ogLocale: 'ru_RU',
     ogSiteName: 'ГидМед',
     ogImage: image,
+    ogImageWidth: 1280,
+    ogImageHeight: 706,
+    ogImageType: 'image/png',
     ogImageAlt: 'Фасад клиники Жуйкан в Хэйхэ',
     twitterCard: 'summary_large_image',
     twitterTitle: title,

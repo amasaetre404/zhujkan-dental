@@ -43,7 +43,7 @@ watch(contactModal, (open) => {
     <span class="aura-button__pill">
       <span class="aura-button__flood" aria-hidden="true" />
       <span class="aura-button__label"><slot /></span>
-      <span class="aura-button__arrow"><ArrowRight class="size-[15px]" /></span>
+      <span class="aura-button__arrow"><ArrowRight aria-hidden="true" class="size-[15px]" /></span>
     </span>
   </component>
 </template>
@@ -151,13 +151,13 @@ watch(contactModal, (open) => {
 
 .aura-button--primary {
   --aura-frame-border: rgba(255, 255, 255, .25);
-  background: rgba(77, 107, 255, .4);
+  background: rgba(27, 185, 196, .4);
   color: #fff;
   box-shadow: none;
 }
 
 .aura-button--primary .aura-button__pill {
-  background: #4d6bff;
+  background: var(--color-brand-dark);
 }
 
 .aura-button--primary .aura-button__flood {
@@ -173,7 +173,7 @@ watch(contactModal, (open) => {
   --aura-frame-border: rgba(10, 17, 40, .12);
   background: rgba(255, 255, 255, .73);
   color: #0a1128;
-  box-shadow: 0 18px 34px -18px rgba(14, 31, 122, .28);
+  box-shadow: 0 18px 34px -18px rgba(8, 119, 128, .28);
 }
 
 .aura-button--primary.is-hovered .aura-button__arrow {
@@ -208,7 +208,7 @@ watch(contactModal, (open) => {
 
 .aura-button--secondary.is-hovered {
   --aura-frame-border: rgba(255, 255, 255, .25);
-  background: rgba(77, 107, 255, .4);
+  background: rgba(27, 185, 196, .4);
   color: #fff;
 }
 
@@ -217,7 +217,7 @@ watch(contactModal, (open) => {
   right: -210px;
   bottom: -200px;
   left: calc(100% - 250px);
-  background: #4d6bff;
+  background: var(--color-brand-dark);
 }
 
 .aura-button--secondary.is-hovered .aura-button__arrow {
