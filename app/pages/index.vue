@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import HomeHero from '~/components/HomeHero.vue'
+import TreatmentIncluded from '~/components/TreatmentIncluded.vue'
 import CoordinatorCta from '~/components/CoordinatorCta.vue'
 import JourneyMap from '~/components/JourneyMap.vue'
 import CareAdvantages from '~/components/CareAdvantages.vue'
@@ -21,6 +22,7 @@ useSchemaOrg([
 <template>
   <main id="main-content" tabindex="-1">
     <HomeHero />
+    <TreatmentIncluded />
 
     <section class="bg-paper px-5 pt-8 pb-20 md:px-8 md:pt-16 lg:px-12 lg:pb-30">
       <div class="mx-auto max-w-[1440px]">
